@@ -11,7 +11,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["about"])),
@@ -24,7 +24,7 @@ export default function Home() {
   const { theme, setTheme } = useTheme();
 
   // const { locale, locales, push } = useRouter();
-  const { locale, locales, push } = useRouter();
+  const { locale, locales = [], push } = useRouter();
   const handleClick = (l: string) => {
     push("/", undefined, { locale: l });
   };
@@ -56,12 +56,25 @@ export default function Home() {
         {/* <div>
           <h3>Choose your locale</h3>
           {locales.map((l) => (
-            <button key={l} onClick={handleClick(l)}>
+            <button key={l} onClick={() => handleClick(l)}>
               {l}
             </button>
           ))}
         </div> */}
         <div>
+          <h3>Choose your locale</h3>
+          {locales.map((l) => (
+            <button key={l} onClick={() => handleClick(l)}>
+              {l}
+            </button>
+          ))}
+          <select value={theme} onChange={(e) => setTheme(e.target.value)}>
+            <option value="system">System</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </div>
+        {/* <div>
           <h3>Choose your locale</h3>
           {locales.map((l) => (
             <h4 key={l}>
@@ -70,7 +83,7 @@ export default function Home() {
               </Link>
             </h4>
           ))}
-        </div>
+        </div> */}
         {/* <div>
           The current theme is: {theme}
           <button onClick={() => setTheme("light")}>Light Mode</button>
