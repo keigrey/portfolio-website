@@ -68,10 +68,10 @@ export default function Home() {
               {l}
             </button>
           ))}
-          <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-            <option value="system">System</option>
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
+          <select value={locale} onChange={(e) => handleClick(e.target.value)}>
+            <option value="en">en</option>
+            <option value="ru">ru</option>
+            <option value="ja">ja</option>
           </select>
         </div>
         {/* <div>
