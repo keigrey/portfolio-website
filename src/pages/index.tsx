@@ -6,8 +6,18 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["about"])),
+    },
+  };
+}
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -18,6 +28,8 @@ export default function Home() {
   const handleClick = (l: string) => {
     push("/", undefined, { locale: l });
   };
+
+  const { t } = useTranslation("about");
 
   console.log(locale);
 
@@ -39,7 +51,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Hello</h1>
+        <h1>{t("introduction")}</h1>
         <h1>{locale}</h1>
         {/* <div>
           <h3>Choose your locale</h3>
