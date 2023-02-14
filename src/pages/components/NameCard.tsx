@@ -12,7 +12,7 @@ export default function NameCard() {
   const dotSymbol = "○";
 
   return (
-    <>
+    <div className="name-card">
       <LanguageSelector />
       <h1>{t("name")}</h1>
       <h2>{t("role")}</h2>
@@ -47,8 +47,8 @@ export default function NameCard() {
           <Link href="/info">{asPath === "/info" ? dotSymbol : t("info")}</Link>
         </li>
       </ul>
-      <ThemeButton mode="dark" />
       <ThemeButton mode="light" />
-    </>
+      <ThemeButton mode="dark" />
+    </div>
   );
 }
