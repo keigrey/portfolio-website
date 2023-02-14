@@ -49,10 +49,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {/* <LanguageSelector />
-        <ThemeButton mode="dark" />
-        <ThemeButton mode="light" />
-        <h1>{t("introduction")}</h1> */}
         <NameCard />
       </main>
     </>
