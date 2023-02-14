@@ -41,6 +41,9 @@ export default function NameCard() {
           </Link>
         </li>
         <li>
+          <Link href="/mail">{asPath === "/mail" ? dotSymbol : t("mail")}</Link>
+        </li>
+        <li>
           <Link href="/info">{asPath === "/info" ? dotSymbol : t("info")}</Link>
         </li>
       </ul>
