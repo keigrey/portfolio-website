@@ -1,10 +1,19 @@
 :root {
-  /* Your default theme */
-  --background: white;
-  --foreground: black;
+  --background-color: #ffffff;
+  --foreground-color: white;
+  --text-color: #000000;
+  --primary-color: white;
+  --secondary-color: #434343;
+  --positive-color: rgb(92, 173, 0);
+  --negative-color: rgb(173, 0, 0);
 }
 
 [data-theme="dark"] {
-  --background: black;
-  --foreground: white;
+  --background-color: #121212;
+  --foreground-color: black;
+  --text-color: #ffffff;
+  --primary-color: black;
+  --secondary-color: #bcbcbc; /* moon */
+  --positive-color: rgb(139, 192, 95);
+  --negative-color: rgb(192, 95, 95);
 }
