@@ -7,7 +7,7 @@ export default function ResumeCard() {
   const { t } = useTranslation("resume");
 
   return (
-    <div className="resume-card">
+    <div className="resume-card section-card">
       <h1>{t("test")}</h1>
     </div>
   );

@@ -7,7 +7,7 @@ export default function InfoCard() {
   const { t } = useTranslation("info");
 
   return (
-    <div className="info-card">
+    <div className="info-card section-card">
       <h1>{t("test")}</h1>
     </div>
   );

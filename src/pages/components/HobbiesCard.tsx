@@ -7,7 +7,7 @@ export default function HobbiesCard() {
   const { t } = useTranslation("hobbies");
 
   return (
-    <div className="hobbies-card">
+    <div className="hobbies-card section-card">
       <h1>{t("test")}</h1>
     </div>
   );

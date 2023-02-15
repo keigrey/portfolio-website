@@ -7,7 +7,7 @@ export default function ProjectsCard() {
   const { t } = useTranslation("projects");
 
   return (
-    <div className="projects-card">
+    <div className="projects-card section-card">
       <h1>{t("test")}</h1>
     </div>
   );
