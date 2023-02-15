@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NameCard from "./components/NameCard";
+import InfoCard from "./components/InfoCard";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -39,8 +40,7 @@ export default function Info() {
       </Head>
       <main>
         <NameCard />
-        <h1>Info PAGE</h1>
-        <h1>{t("test")}</h1>
+        <InfoCard />
       </main>
     </>
   );
