@@ -1,13 +1,48 @@
-:root {
-  /* Your default theme */
-  --background: white;
-  --foreground: black;
+body {
+  background-color: var(--background);
 }
 
-[data-theme="dark"] {
-  --background: black;
-  --foreground: white;
+/* .name-card {
+  background-color: var(--positive-color);
+  color: var(--text-color);
+  border: 2px dotted rgb(255, 238, 0);
+} */
+
+.section-card {
+  background-color: var(--negative-color);
+  border: 2px dotted rgb(0, 81, 255);
 }
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.name-card {
+  background-color: var(--positive-color);
+  color: var(--text-color);
+  border: 2px dotted rgb(255, 238, 0);
+  padding: 20px;
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* :root {
   --max-width: 1100px;
