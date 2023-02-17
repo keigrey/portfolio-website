@@ -11,6 +11,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import LanguageSelector from "./components/LanguageSelector";
 import ThemeButton from "./components/ThemeButton";
 import NameCard from "./components/NameCard";
+import Clouds from "./components/Clouds";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,6 +51,7 @@ export default function Home() {
       </Head>
       <main>
         <NameCard />
+        <Clouds />
       </main>
     </>
   );
