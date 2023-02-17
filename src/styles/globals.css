@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Lato:wght@300;400&display=swap");
+
 body {
   background-color: var(--background);
 }
@@ -34,6 +36,10 @@ body {
   border: 2px dotted rgb(255, 238, 0);
   padding: 20px;
   display: flex;
+  /* ///////////////////// */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  /* ///////////////////// */
 }
 
 @media only screen and (min-width: 768px) {
