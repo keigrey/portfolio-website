@@ -10,7 +10,7 @@ function ThemeButton({ mode }: { mode: string }) {
 
   return (
     <>
-      <button onClick={() => setTheme(mode)}>
+      <button className="theme-button" onClick={() => setTheme(mode)}>
         {mode === "dark" ? t("night") : t("day")}
       </button>
     </>

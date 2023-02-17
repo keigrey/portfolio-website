@@ -13,9 +13,9 @@ export default function NameCard() {
 
   return (
     <div className="name-card">
+      <h1 className="name">{t("name")}</h1>
       <LanguageSelector />
-      <h1>{t("name")}</h1>
-      <h2>{t("role")}</h2>
+      <h2 className="role">{t("role")}</h2>
       <ul>
         <li>
           <Link href="/">{asPath === "/" ? dotSymbol : t("home")}</Link>

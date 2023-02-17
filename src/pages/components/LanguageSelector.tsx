@@ -12,7 +12,7 @@ function LanguageSelector() {
   const { t } = useTranslation("about");
   return (
     <>
-      <div>
+      <div className="language-selector">
         <select value={locale} onChange={(e) => handleClick(e.target.value)}>
           <option value="en">en</option>
           <option value="ru">ru</option>
