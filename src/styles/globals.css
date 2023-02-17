@@ -30,22 +30,40 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 
+.container .name-card {
+  order: 1;
+}
+
 .name-card {
   background-color: var(--positive-color);
   color: var(--text-color);
   border: 2px dotted rgb(255, 238, 0);
-  padding: 20px;
-  display: flex;
   /* ///////////////////// */
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   /* ///////////////////// */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.language-selector {
+  background-color: red;
+  align-self: flex-end;
+}
+
+.name {
+  background-color: aqua;
 }
 
 @media only screen and (min-width: 768px) {
   .container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+  }
+
+  .container .name-card {
+    order: -1;
   }
 }
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
