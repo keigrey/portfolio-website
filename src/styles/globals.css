@@ -58,6 +58,28 @@ body {
   width: 60%;
 }
 
+.menu {
+  align-self: flex-end;
+  list-style-type: none;
+  text-align: right;
+}
+
+.menu-item.active {
+  color: yellow;
+}
+
+.theme-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: inherit;
+}
+
+.theme-button.active {
+  background-color: olive;
+}
+
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 768px) {

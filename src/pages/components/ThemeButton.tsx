@@ -10,7 +10,10 @@ function ThemeButton({ mode }: { mode: string }) {
 
   return (
     <>
-      <button className="theme-button" onClick={() => setTheme(mode)}>
+      <button
+        className={`theme-button ${theme === mode ? "active" : ""}`}
+        onClick={() => setTheme(mode)}
+      >
         {mode === "dark" ? t("night") : t("day")}
       </button>
     </>
