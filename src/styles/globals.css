@@ -45,6 +45,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .language-selector {
@@ -58,14 +59,27 @@ body {
   width: 60%;
 }
 
+.menu-and-theme {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .menu {
   align-self: flex-end;
   list-style-type: none;
   text-align: right;
+  /* display: inline-block; */
 }
 
 .menu-item.active {
   color: yellow;
+}
+
+.theme-selector {
+  background-color: red;
+  /* display: inline-block; */
 }
 
 .theme-button {
