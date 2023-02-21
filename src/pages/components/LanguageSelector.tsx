@@ -13,11 +13,19 @@ function LanguageSelector() {
   return (
     <>
       <div className="language-selector">
-        <select value={locale} onChange={(e) => handleClick(e.target.value)}>
+        {/* <select value={locale} onChange={(e) => handleClick(e.target.value)}>
           <option value="en">en</option>
           <option value="ru">ru</option>
           <option value="ja">ja</option>
-        </select>
+        </select> */}
+        <button className="dropdown-button">{locale}</button>
+        <div className="dropdown-content">
+          {locales.map((l) => (
+            <button key={l} onClick={() => handleClick(l)}>
+              {l}
+            </button>
+          ))}
+        </div>
       </div>
     </>
   );
