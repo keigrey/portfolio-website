@@ -35,7 +35,8 @@ body {
 }
 
 .name-card {
-  background-color: var(--positive-color);
+  /* background-color: var(--positive-color); */
+  background-color: var(--background-color);
   color: var(--text-color);
   border: 2px dotted rgb(255, 238, 0);
   /* ///////////////////// */
@@ -49,14 +50,60 @@ body {
 }
 
 .language-selector {
-  background-color: red;
   align-self: flex-end;
   position: absolute;
 }
 
+.dropdown-button {
+  background: none;
+  color: inherit;
+  outline: inherit;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  border: 3.5px solid var(--text-color);
+  border-radius: 50%;
+  padding-bottom: 15%;
+}
+
+.dropdown-content button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: inherit;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.language-selector:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .name {
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 60%;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.role {
+  /* background-color: red; */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .menu-and-theme {
@@ -71,16 +118,23 @@ body {
   list-style-type: none;
   text-align: right;
   /* display: inline-block; */
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 110%;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: inherit;
 }
 
 .menu-item.active {
-  color: yellow;
+  color: rgb(255, 255, 255);
 }
 
-.theme-selector {
+/* .theme-selector {
   background-color: red;
-  /* display: inline-block; */
-}
+} */
 
 .theme-button {
   background: none;
@@ -88,10 +142,13 @@ body {
   color: inherit;
   font: inherit;
   outline: inherit;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
 }
 
 .theme-button.active {
-  background-color: olive;
+  /* background-color: olive; */
+  color: var(--secondary-text-color);
 }
 
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
