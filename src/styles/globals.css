@@ -41,9 +41,9 @@ body {
   border: 2px dotted rgb(255, 238, 0);
   /* ///////////////////// */
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   /* ///////////////////// */
-  padding: 20px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,14 +72,23 @@ body {
 }
 
 .dropdown-content button {
-  background: none;
   border: none;
-  color: inherit;
-  font: inherit;
   outline: inherit;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
+  color: var(--alternative-text-color);
+  background-color: var(--foreground-color);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  padding-bottom: 15%;
+  margin-top: 0.8rem;
+}
+
+.dropdown-content button:hover {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
 }
 
 .dropdown-content {
@@ -92,18 +101,17 @@ body {
 }
 
 .name {
-  /* background-color: aqua; */
-  width: 60%;
+  width: 50%;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 
 .role {
-  /* background-color: red; */
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
 }
 
 .menu-and-theme {
@@ -111,30 +119,22 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
+  height: 10rem;
 }
 
 .menu {
   align-self: flex-end;
   list-style-type: none;
   text-align: right;
-  /* display: inline-block; */
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 110%;
+  font-size: 1.3rem;
 }
 
 .menu-item {
   text-decoration: none;
   color: inherit;
 }
-
-.menu-item.active {
-  color: rgb(255, 255, 255);
-}
-
-/* .theme-selector {
-  background-color: red;
-} */
 
 .theme-button {
   background: none;
@@ -144,10 +144,12 @@ body {
   outline: inherit;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+  font-size: 1.2rem;
+  padding-right: 1.5rem;
+  text-align: left;
 }
 
 .theme-button.active {
-  /* background-color: olive; */
   color: var(--secondary-text-color);
 }
 
