@@ -20,7 +20,6 @@ export default function Projects() {
   const { t } = useTranslation("projects");
 
   useEffect(() => {
-    window.scrollTo(0, 1);
     setMounted(true);
   }, []);
 

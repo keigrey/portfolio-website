@@ -31,7 +31,6 @@ export default function Home() {
   const { t } = useTranslation("about");
 
   useEffect(() => {
-    window.scrollTo(0, 1);
     setMounted(true);
   }, []);
 
