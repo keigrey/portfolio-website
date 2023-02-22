@@ -58,8 +58,8 @@ body {
   background: none;
   color: inherit;
   outline: inherit;
-  width: 3rem;
-  height: 3rem;
+  width: 2.7rem;
+  height: 2.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,8 +79,8 @@ body {
   font-size: 1.5rem;
   color: var(--alternative-text-color);
   background-color: var(--foreground-color);
-  width: 3rem;
-  height: 3rem;
+  width: 2.7rem;
+  height: 2.7rem;
   border-radius: 50%;
   padding-bottom: 15%;
   margin-top: 0.8rem;
@@ -150,7 +150,7 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
-  height: 10rem;
+  height: 5rem;
 }
 
 .menu {
