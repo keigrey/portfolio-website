@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Lato:wght@300;400&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@300;400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200;300&family=M+PLUS+1p:wght@500;900&display=swap");
+
 body {
   background-color: var(--background);
 }
@@ -39,10 +43,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   border: 2px dotted rgb(255, 238, 0);
-  /* ///////////////////// */
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-  /* ///////////////////// */
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -102,16 +102,45 @@ body {
 
 .name {
   width: 50%;
+}
+
+.name:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   font-size: 2.3rem;
 }
+.name:lang(ru) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.3rem;
+  line-height: 2.3rem;
+}
+.name:lang(ja) {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 900;
+  font-size: 2.3rem;
+  width: 70%;
+}
 
 .role {
+  margin-top: 0.8rem;
+}
+
+.role:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
-  margin-top: 0.8rem;
+}
+.role:lang(ru) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.35rem;
+}
+.role:lang(ja) {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
 }
 
 .menu-and-theme {
@@ -126,9 +155,26 @@ body {
   align-self: flex-end;
   list-style-type: none;
   text-align: right;
+}
+
+.menu:lang(en) {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1.3rem;
+}
+.menu:lang(ru) {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+}
+.menu:lang(ja) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.menu:lang(ru) li {
+  margin: 0.3rem 0;
 }
 
 .menu-item {
@@ -142,11 +188,24 @@ body {
   color: inherit;
   font: inherit;
   outline: inherit;
+  padding-right: 1.5rem;
+  text-align: left;
+}
+
+.theme-button:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
-  padding-right: 1.5rem;
-  text-align: left;
+}
+.theme-button:lang(ru) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.theme-button:lang(ja) {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .theme-button.active {
