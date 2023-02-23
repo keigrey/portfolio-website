@@ -44,6 +44,7 @@ body {
   color: var(--text-color);
   border: 2px dotted rgb(255, 238, 0);
   padding: 2rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -103,7 +104,6 @@ body {
 .name {
   word-spacing: 100vw;
 }
-
 .name:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
@@ -126,7 +126,6 @@ body {
   word-spacing: 100vw;
   margin-top: 0.8rem;
 }
-
 .role:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
@@ -158,7 +157,6 @@ body {
   list-style-type: none;
   text-align: right;
 }
-
 .menu:lang(en) {
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -224,6 +222,127 @@ body {
 
   .container .name-card {
     order: -1;
+  }
+
+  .language-selector {
+    align-self: flex-start;
+    position: relative;
+  }
+
+  .name-and-role {
+    text-align: right;
+    position: absolute;
+    margin-right: 2rem;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .name:lang(en) {
+    font-size: 3.5rem;
+  }
+  .name:lang(ru) {
+    font-size: 3.6rem;
+    line-height: 3.4rem;
+  }
+  .name:lang(ja) {
+    font-size: 3.8rem;
+    line-height: 3.8rem;
+  }
+
+  .role {
+    word-spacing: normal;
+  }
+  .role:lang(en) {
+    font-size: 1.685rem;
+    margin-top: 0.5rem;
+  }
+  .role:lang(ru) {
+    word-spacing: 100vw;
+    font-size: 1.7rem;
+    line-height: 1.6rem;
+    margin-top: 0.8rem;
+  }
+  .role:lang(ja) {
+    word-spacing: 100vw;
+    font-size: 1.66rem;
+    line-height: 1.75rem;
+    margin-top: 0.9rem;
+  }
+
+  .menu:lang(en) {
+    font-size: 1rem;
+  }
+  .menu:lang(ru) {
+    font-size: 0.9rem;
+  }
+  .menu:lang(ja) {
+    font-size: 0.9rem;
+  }
+
+  .menu:lang(ru) li {
+    margin: 0.2rem 0;
+  }
+}
+
+@media only screen and (min-width: 1030px) {
+  .name:lang(en) {
+    font-size: 5rem;
+  }
+  .name:lang(ru) {
+    font-size: 5rem;
+    line-height: 4.7rem;
+  }
+  .name:lang(ja) {
+    font-size: 5.6rem;
+    line-height: 5.5rem;
+  }
+
+  .role {
+    word-spacing: normal;
+    margin-top: 0rem;
+  }
+  .role:lang(en) {
+    font-size: 2.41rem;
+  }
+  .role:lang(ru) {
+    font-size: 2.4rem;
+    line-height: 2.35rem;
+  }
+  .role:lang(ja) {
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .name:lang(en) {
+    font-size: 7.3rem;
+  }
+  .name:lang(ru) {
+    font-size: 7.4rem;
+    line-height: 7rem;
+  }
+  .name:lang(ja) {
+    font-size: 7.2rem;
+    line-height: 7rem;
+  }
+
+  .role {
+    word-spacing: normal;
+    margin-top: 0rem;
+  }
+  .role:lang(en) {
+    font-size: 3.52rem;
+  }
+  .role:lang(ru) {
+    font-size: 3.62rem;
+    line-height: 3.5rem;
+    margin-top: 1rem;
+  }
+  .role:lang(ja) {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 }
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
