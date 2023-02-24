@@ -4,9 +4,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200;300&family=M+PLUS+1p:wght@500;900&display=swap");
 
-body {
-  background-color: var(--background);
+:root {
+  --theme-transition-time: 1s;
 }
+
+body {
+  background-color: var(--background-color);
+}
+
+/* body {
+  background: var(--positive-color);
+  transition: background 2s;
+} */
 
 /* .name-card {
   background-color: var(--positive-color);
@@ -25,6 +34,26 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+/* ///////////////////////////////////--- TRANSITIONS ---////////////////////////////////////////////// */
+.name-card,
+.section-card,
+.moon {
+  transition: background-color var(--theme-transition-time);
+}
+
+.dropdown-button {
+  /* transition: color var(--theme-transition-time); */
+  /* transition: border var(--theme-transition-time); */
+  transition: all var(--theme-transition-time);
+}
+
+.name,
+.role,
+.menu,
+.theme-button {
+  transition: color var(--theme-transition-time);
 }
 
 .container {
@@ -49,6 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* transition: background-color var(--bg-color-transition-time); */
 }
 
 .language-selector {
@@ -238,6 +268,8 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin-top: -25vw;
+  /* TODO: possibly add glow */
+  /* box-shadow: 50px 0px 400px 20px var(--secondary-color); */
 }
 
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
