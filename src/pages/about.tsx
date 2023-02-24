@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NameCard from "./components/NameCard";
 import AboutCard from "./components/AboutCard";
+import SmallMoon from "./components/SmallMoon";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -41,6 +42,7 @@ export default function About() {
       <div className="container">
         <NameCard />
         <AboutCard />
+        <SmallMoon />
       </div>
     </>
   );
