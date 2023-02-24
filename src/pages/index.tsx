@@ -12,6 +12,7 @@ import LanguageSelector from "./components/LanguageSelector";
 import ThemeButton from "./components/ThemeButton";
 import NameCard from "./components/NameCard";
 import Clouds from "./components/Clouds";
+import Moon from "./components/Moon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,6 +53,7 @@ export default function Home() {
       <div className="container">
         <NameCard />
         <Clouds />
+        <Moon />
       </div>
     </>
   );
