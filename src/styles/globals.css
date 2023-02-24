@@ -15,7 +15,8 @@ body {
 } */
 
 .section-card {
-  background-color: var(--negative-color);
+  /* background-color: var(--negative-color); */
+  background-color: var(--background-color);
   border: 2px dotted rgb(0, 81, 255);
 }
 
@@ -219,6 +220,20 @@ body {
   color: var(--secondary-text-color);
 }
 
+/* //////////  -- MOON --  /////////// */
+.moon {
+  background-color: var(--secondary-color);
+  position: absolute;
+  width: 100vw;
+  height: 50vw;
+  border-radius: 50vw 50vw 0 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-top: -25vw;
+}
+
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 768px) {
@@ -290,6 +305,20 @@ body {
   .menu:lang(ru) li {
     margin: 0.2rem 0;
   }
+
+  .moon {
+    background-color: var(--secondary-color);
+    position: absolute;
+    width: 50vh;
+    height: 100vh;
+    border-radius: 0 50vh 50vh 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    margin-left: 25vh;
+  }
 }
 
 @media only screen and (min-width: 1030px) {
@@ -352,6 +381,19 @@ body {
     line-height: 3rem;
   }
 }
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* .moon {
+  background-color: var(--secondary-color);
+  position: absolute;
+  width: 50vh;
+  height: 100vh;
+  border-radius: 0 50vh 50vh 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: 25vh;
+} */
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* :root {
