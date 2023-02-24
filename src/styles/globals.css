@@ -216,8 +216,14 @@ body {
   font-size: 1.2rem;
 }
 
+.theme-button:hover {
+  text-shadow: 0px 0px 3px var(--text-color);
+}
+
 .theme-button.active {
-  color: var(--secondary-text-color);
+  /* color: var(--secondary-text-color); */
+  color: transparent;
+  text-shadow: 0px 0px 3px var(--secondary-text-color);
 }
 
 /* //////////  -- MOON --  /////////// */
