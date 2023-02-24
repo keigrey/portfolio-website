@@ -39,7 +39,8 @@ body {
 /* //////////////////////////////--- TRANSITIONS - COLORS ---/////////////////////////////////////// */
 .name-card,
 .section-card,
-.moon {
+.moon,
+.small-moon {
   transition: background-color var(--theme-transition-time);
 }
 
@@ -270,6 +271,20 @@ body {
   box-shadow: 0px 0px 150px 40px var(--secondary-color);
 }
 
+.small-moon {
+  background-color: var(--secondary-color);
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 60vw;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0.18;
+  z-index: 10;
+}
+
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 768px) {
@@ -355,6 +370,20 @@ body {
     margin-top: 0;
     margin-left: 25vh;
     box-shadow: 0px 0px 400px 20px var(--secondary-color);
+  }
+
+  .small-moon {
+    background-color: var(--secondary-color);
+    position: absolute;
+    width: 60vh;
+    height: 60vh;
+    border-radius: 60vh;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0.18;
+    z-index: 10;
   }
 }
 
