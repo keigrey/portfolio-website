@@ -1,14 +1,20 @@
 import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
+import Script from "next/script";
 
 export default function Clouds() {
-  const { t } = useTranslation("info");
-
   return (
-    <div className="section-card">
-      <div className="clouds">Clouds</div>
+    <div className="clouds">
+      <h1>Clouds</h1>
+      <div className="background--custom">
+        <canvas id="canvas" />
+      </div>
+      <Script
+        src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"
+        onLoad={() => {
+          const gradient = new Gradient();
+          gradient.initGradient("#canvas");
+        }}
+      ></Script>
     </div>
   );
 }
