@@ -17,14 +17,11 @@ body {
   transition: background 2s;
 } */
 
-/* .name-card {
-  background-color: var(--positive-color);
-  color: var(--text-color);
+.name-card {
   border: 2px dotted rgb(255, 238, 0);
-} */
+}
 
 .section-card {
-  /* background-color: var(--negative-color); */
   background-color: var(--background-color);
   border: 2px dotted rgb(0, 81, 255);
 }
@@ -72,7 +69,6 @@ body {
 .name-card {
   background-color: var(--background-color);
   color: var(--text-color);
-  border: 2px dotted rgb(255, 238, 0);
   padding: 2rem;
   position: relative;
   display: flex;
@@ -261,13 +257,12 @@ body {
   background-color: var(--secondary-color);
   position: absolute;
   width: 100vw;
-  height: 50vw;
-  border-radius: 50vw 50vw 0 0;
+  height: 100vw;
+  border-radius: 50vw;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  margin-top: -25vw;
   box-shadow: 0px 0px 150px 40px var(--secondary-color);
 }
 
@@ -360,15 +355,13 @@ body {
   .moon {
     background-color: var(--secondary-color);
     position: absolute;
-    width: 50vh;
+    width: 100vh;
     height: 100vh;
-    border-radius: 0 50vh 50vh 0;
+    border-radius: 50vh;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    margin-top: 0;
-    margin-left: 25vh;
     box-shadow: 0px 0px 400px 20px var(--secondary-color);
   }
 
