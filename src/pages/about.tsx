@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NameCard from "./components/NameCard";
 import AboutCard from "./components/AboutCard";
 import SmallMoon from "./components/SmallMoon";
+import SectionCard from "./components/SectionCard";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -41,7 +42,9 @@ export default function About() {
       </Head>
       <div className="container">
         <NameCard />
-        <AboutCard />
+        <SectionCard>
+          <AboutCard />
+        </SectionCard>
         <SmallMoon />
       </div>
     </>

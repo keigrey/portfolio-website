@@ -14,6 +14,7 @@ import NameCard from "./components/NameCard";
 import Clouds from "./components/Clouds";
 import Moon from "./components/Moon";
 import IndexCard from "./components/IndexCard";
+import SectionCard from "./components/SectionCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,7 +54,9 @@ export default function Home() {
       </Head>
       <div className="container">
         <NameCard />
-        <IndexCard />
+        <SectionCard>
+          <IndexCard />
+        </SectionCard>
         <Moon />
       </div>
     </>
