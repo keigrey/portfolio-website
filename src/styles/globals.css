@@ -18,12 +18,11 @@ body {
 } */
 
 .name-card {
-  /* border: 2px dotted rgb(255, 238, 0); */
+  border: 2px dotted rgb(255, 238, 0);
 }
 
 .section-card {
-  background-color: var(--background-color);
-  /* border: 2px dotted rgb(0, 81, 255); */
+  border: 2px dotted rgb(0, 81, 255);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -282,10 +281,9 @@ body {
 }
 
 /* //////////  -- CLOUDS --  /////////// */
-.index-card,
-.about-card {
+.section-card {
   overflow: hidden;
-  opacity: 0.35;
+  /* opacity: 0.5; */
 }
 
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
