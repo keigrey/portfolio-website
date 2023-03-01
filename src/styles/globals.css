@@ -17,13 +17,13 @@ body {
   transition: background 2s;
 } */
 
-.name-card {
+/* .name-card {
   border: 2px dotted rgb(255, 238, 0);
 }
 
 .section-card {
   border: 2px dotted rgb(0, 81, 255);
-}
+} */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 * {
@@ -283,16 +283,11 @@ body {
 /* //////////  -- CLOUDS --  /////////// */
 .section-card {
   overflow: hidden;
-  opacity: 0.2;
 }
 
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 768px) {
-  .section-card {
-    opacity: 0.5;
-  }
-
   .container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
