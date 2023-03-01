@@ -5,20 +5,11 @@ import { useTheme } from "next-themes";
 import FOG from "vanta/dist/vanta.fog.min";
 import * as THREE from "three";
 
-interface WindowSizeInterface {
-  width: number | undefined;
-  height: number | undefined;
-}
-
 const getVantaEffectProperties = (
   vantaReference: any,
-  currentTheme: string | undefined,
-  windowSize: WindowSizeInterface
+  currentTheme: string | undefined
 ) => {
   const darkTheme = currentTheme === "dark";
-  const zoomValue =
-    // @ts-ignore
-    windowSize.height < 450 || windowSize.width < 769 ? 0.3 : 0.6;
 
   return {
     el: vantaReference.current,
@@ -29,7 +20,7 @@ const getVantaEffectProperties = (
     midtoneColor: darkTheme ? 0xaeaeae : 0xca2f1c,
     lowlightColor: darkTheme ? 0x0 : 0x6041ea,
     baseColor: darkTheme ? 0x0 : 0x82d18a,
-    zoom: zoomValue,
+    zoom: 0.6,
   };
 };
 
@@ -39,20 +30,15 @@ export default function SectionCard(props) {
 
   const { theme, resolvedTheme } = useTheme();
 
-  const size = useWindowSize();
-
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(
-        FOG(getVantaEffectProperties(vantaRef, resolvedTheme, size))
-      );
+      setVantaEffect(FOG(getVantaEffectProperties(vantaRef, resolvedTheme)));
     } else {
-      setVantaEffect(
-        FOG(getVantaEffectProperties(vantaRef, resolvedTheme, size))
-      );
+      vantaEffect.destroy();
+      setVantaEffect(FOG(getVantaEffectProperties(vantaRef, resolvedTheme)));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [theme, size]);
+  }, [theme]);
 
   useEffect(() => {
     return () => vantaEffect?.destroy();
@@ -64,30 +50,4 @@ export default function SectionCard(props) {
       {props.children}
     </div>
   );
-}
-
-// Hook
-function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  const [windowSize, setWindowSize] = useState<WindowSizeInterface>({
-    width: undefined,
-    height: undefined,
-  });
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-    // Call handler right away so state gets updated with initial window size
-    handleResize();
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
-  }, []); // Empty array ensures that effect is only run on mount
-  return windowSize;
 }
