@@ -16,10 +16,10 @@ const getVantaEffectProperties = (
     THREE,
     minHeight: 200.0,
     minWidth: 200.0,
-    highlightColor: darkTheme ? 0xffffff : 0xd9bc60,
-    midtoneColor: darkTheme ? 0xaeaeae : 0xca2f1c,
-    lowlightColor: darkTheme ? 0x0 : 0x6041ea,
-    baseColor: darkTheme ? 0x0 : 0x82d18a,
+    highlightColor: darkTheme ? 0x797979 : 0x636363,
+    midtoneColor: darkTheme ? 0x0 : 0xffffff,
+    lowlightColor: darkTheme ? 0x0 : 0xffffff,
+    baseColor: darkTheme ? 0x0 : 0xffffff,
     zoom: 0.6,
   };
 };
