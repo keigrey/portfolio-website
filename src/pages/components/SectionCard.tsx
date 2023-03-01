@@ -28,14 +28,19 @@ export default function SectionCard(props) {
   const [vantaEffect, setVantaEffect] = useState<any>(null);
   const vantaRef = useRef(null);
 
+  const [fade, setFade] = useState<boolean>(false);
+
   const { theme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(FOG(getVantaEffectProperties(vantaRef, resolvedTheme)));
     } else {
-      vantaEffect.destroy();
-      setVantaEffect(FOG(getVantaEffectProperties(vantaRef, resolvedTheme)));
+      setFade(true);
+      setTimeout(() => {
+        setVantaEffect(FOG(getVantaEffectProperties(vantaRef, resolvedTheme)));
+        setFade(false);
+      }, 500);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme]);
@@ -46,7 +51,10 @@ export default function SectionCard(props) {
   }, []);
 
   return (
-    <div ref={vantaRef} className="section-card">
+    <div
+      ref={vantaRef}
+      className={`section-card ${fade ? "fade-out" : "fade-in"}`}
+    >
       {props.children}
     </div>
   );
