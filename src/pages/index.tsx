@@ -11,7 +11,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import LanguageSelector from "./components/LanguageSelector";
 import ThemeButton from "./components/ThemeButton";
 import NameCard from "./components/NameCard";
-import Clouds from "./components/Clouds";
 import Moon from "./components/Moon";
 import IndexCard from "./components/IndexCard";
 import SectionCard from "./components/SectionCard";
