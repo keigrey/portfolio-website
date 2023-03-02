@@ -7,6 +7,7 @@ import NameCard from "./components/NameCard";
 import AboutCard from "./components/AboutCard";
 import SmallMoon from "./components/SmallMoon";
 import SectionCard from "./components/SectionCard";
+import FilmGrain from "./components/FilmGrain";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -40,6 +41,7 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <FilmGrain />
       <div className="container">
         <NameCard />
         <SectionCard>

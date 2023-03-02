@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NameCard from "./components/NameCard";
 import ProjectsCard from "./components/ProjectsCard";
+import FilmGrain from "./components/FilmGrain";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -38,9 +39,21 @@ export default function Projects() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <FilmGrain />
       <div className="container">
         <NameCard />
         <ProjectsCard />
+        {/* <svg viewBox="0 0 500 500">
+          <filter id="noiseFilter">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency=".75"
+              numOctaves="2"
+              stitchTiles="stitch"
+            />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+        </svg> */}
       </div>
     </>
   );
