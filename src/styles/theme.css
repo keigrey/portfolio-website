@@ -8,6 +8,8 @@
   --secondary-color: #555555;
   --positive-color: rgb(92, 173, 0);
   --negative-color: rgb(173, 0, 0);
+
+  --clouds-opacity: 0.4;
 }
 
 [data-theme="dark"] {
@@ -20,4 +22,6 @@
   --secondary-color: #bcbcbc; /* moon */
   --positive-color: rgb(139, 192, 95);
   --negative-color: rgb(192, 95, 95);
+
+  --clouds-opacity: 0.25;
 }
