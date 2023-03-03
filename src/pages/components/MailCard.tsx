@@ -7,7 +7,7 @@ export default function MailCard() {
   const { t } = useTranslation("mail");
 
   return (
-    <div className="mail-card section-card">
+    <div className="mail-card content-card">
       <h1>{t("test")}</h1>
     </div>
   );

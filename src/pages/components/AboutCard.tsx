@@ -7,7 +7,7 @@ export default function AboutCard() {
   const { t } = useTranslation("about");
 
   return (
-    <div className="about-card">
+    <div className="about-card content-card">
       <h1>About</h1>
       {/* <h1>{t("introduction")}</h1> */}
     </div>
