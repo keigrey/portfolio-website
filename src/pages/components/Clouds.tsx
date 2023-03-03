@@ -17,7 +17,7 @@ const getVantaEffectProperties = (
     minHeight: 200.0,
     minWidth: 200.0,
     highlightColor: darkTheme ? 0xffffff : 0x000000,
-    midtoneColor: darkTheme ? 0x000000 : 0xffffff,
+    midtoneColor: darkTheme ? 0x7c7c7c : 0x818181,
     lowlightColor: darkTheme ? 0x000000 : 0xffffff,
     baseColor: darkTheme ? 0x000000 : 0xffffff,
     zoom: 0.6,
