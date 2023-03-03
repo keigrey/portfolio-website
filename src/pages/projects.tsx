@@ -6,6 +6,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NameCard from "./components/NameCard";
 import ProjectsCard from "./components/ProjectsCard";
 import FilmGrain from "./components/FilmGrain";
+import Clouds from "./components/Clouds";
+import SectionCard from "./components/SectionCard";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -42,7 +44,10 @@ export default function Projects() {
       <FilmGrain />
       <div className="container">
         <NameCard />
-        <ProjectsCard />
+        <SectionCard>
+          <Clouds />
+          <ProjectsCard />
+        </SectionCard>
         {/* <svg viewBox="0 0 500 500">
           <filter id="noiseFilter">
             <feTurbulence

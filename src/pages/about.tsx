@@ -8,6 +8,7 @@ import AboutCard from "./components/AboutCard";
 import SmallMoon from "./components/SmallMoon";
 import SectionCard from "./components/SectionCard";
 import FilmGrain from "./components/FilmGrain";
+import Clouds from "./components/Clouds";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -45,6 +46,7 @@ export default function About() {
       <div className="container">
         <NameCard />
         <SectionCard>
+          <Clouds />
           <AboutCard />
         </SectionCard>
         <SmallMoon />

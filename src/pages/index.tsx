@@ -15,6 +15,7 @@ import Moon from "./components/Moon";
 import IndexCard from "./components/IndexCard";
 import SectionCard from "./components/SectionCard";
 import FilmGrain from "./components/FilmGrain";
+import Clouds from "./components/Clouds";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,6 +57,7 @@ export default function Home() {
       <div className="container">
         <NameCard />
         <SectionCard>
+          <Clouds />
           <IndexCard />
         </SectionCard>
         <Moon />

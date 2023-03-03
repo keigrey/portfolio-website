@@ -6,6 +6,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NameCard from "./components/NameCard";
 import InfoCard from "./components/InfoCard";
 import FilmGrain from "./components/FilmGrain";
+import SectionCard from "./components/SectionCard";
+import Clouds from "./components/Clouds";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -42,7 +44,10 @@ export default function Info() {
       <FilmGrain />
       <div className="container">
         <NameCard />
-        <InfoCard />
+        <SectionCard>
+          <Clouds />
+          <InfoCard />
+        </SectionCard>
       </div>
     </>
   );
