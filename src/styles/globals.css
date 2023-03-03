@@ -352,14 +352,6 @@ body,
   position: absolute;
 } */
 
-.about-card h1 {
-  background-color: red;
-  width: fit-content;
-  padding: 30px 10px;
-  border-radius: 20px;
-  margin: 40px;
-}
-
 .clouds {
   overflow: hidden;
   position: absolute;
@@ -368,12 +360,20 @@ body,
   z-index: -1;
 }
 .clouds.fade-in {
-  opacity: 1;
+  opacity: var(--clouds-opacity);
   transition: opacity 1.5s;
 }
 .clouds.fade-out {
   opacity: 0;
   transition: opacity 0.5s;
+}
+
+.about-card h1 {
+  background-color: red;
+  width: fit-content;
+  padding: 30px 10px;
+  border-radius: 20px;
+  margin: 40px;
 }
 
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
