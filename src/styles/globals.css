@@ -68,13 +68,6 @@ body {
   }
 }
 
-/* //////////////////////////////--- NOISE - TEST ---/////////////////////////////////////// */
-
-/* body {
-  background: var(--positive-color);
-  transition: background 2s;
-} */
-
 /* .name-card {
   border: 2px dotted rgb(255, 238, 0);
 }
@@ -93,7 +86,7 @@ body {
 /* //////////////////////////////--- TRANSITIONS - COLORS ---/////////////////////////////////////// */
 body,
 .name-card,
-.section-card,
+.content-card,
 .moon,
 .small-moon {
   transition: background-color var(--theme-transition-time);
@@ -341,39 +334,46 @@ body,
 
 /* //////////  -- CLOUDS --  /////////// */
 .section-card {
-  overflow: hidden;
   position: relative;
-  /* transition: opacity 0.5s; */
+  overflow: hidden;
 }
-.section-card.fade-in {
+.content-card {
+  height: 100%;
+  width: 100%;
+}
+/* .index-card,
+.about-card,
+.resume-card,
+.projects-card,
+.hobbies-card,
+.mail-card,
+.info-card {
+  background-color: red;
+  position: absolute;
+} */
+
+.about-card h1 {
+  background-color: red;
+  width: fit-content;
+  padding: 30px 10px;
+  border-radius: 20px;
+  margin: 40px;
+}
+
+.clouds {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.clouds.fade-in {
   opacity: 1;
   transition: opacity 1.5s;
 }
-.section-card.fade-out {
+.clouds.fade-out {
   opacity: 0;
   transition: opacity 0.5s;
-}
-
-/* .section-card-cover {
-  background-color: var(--background-color);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: background-color 1s, opacity 1.5s;
-} */
-/* .section-card-cover.fade-in {
-  opacity: 1;
-}
-.section-card-cover.fade-out {
-  opacity: 0;
-} */
-
-.index-card {
-  /* background-color: blue; */
-  /* opacity: 0.5; */
-  height: 100%;
-  width: 100%;
 }
 
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
