@@ -329,15 +329,35 @@ body,
   pointer-events: none;
 }
 
-/* //////////  -- CLOUDS --  /////////// */
 .section-card {
   position: relative;
   overflow: hidden;
 }
+
 .content-card {
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  padding: 2rem;
 }
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border: transparent;
+}
+
+.content-card {
+  background-color: rgb(172, 82, 82);
+  border: 5px dotted yellow;
+}
+
 /* .index-card,
 .about-card,
 .resume-card,
@@ -349,6 +369,7 @@ body,
   position: absolute;
 } */
 
+/* //////////  -- CLOUDS --  /////////// */
 .clouds {
   overflow: hidden;
   position: absolute;
@@ -363,14 +384,6 @@ body,
 .clouds.fade-out {
   opacity: 0;
   transition: opacity 0.5s;
-}
-
-.about-card h1 {
-  background-color: red;
-  width: fit-content;
-  padding: 30px 10px;
-  border-radius: 20px;
-  margin: 40px;
 }
 
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */

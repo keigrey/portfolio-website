@@ -8,8 +8,7 @@ export default function AboutCard() {
 
   return (
     <div className="about-card content-card">
-      <h1>About</h1>
-      {/* <h1>{t("introduction")}</h1> */}
+      <h1>{t("introduction")}</h1>
     </div>
   );
 }
