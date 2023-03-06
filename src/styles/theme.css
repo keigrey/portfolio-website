@@ -9,7 +9,10 @@
   --positive-color: rgb(92, 173, 0);
   --negative-color: rgb(173, 0, 0);
 
-  --clouds-opacity: 0.4;
+  --clouds-opacity-desktop: 0.65;
+  --clouds-opacity-mobile: 0.5;
+
+  --noise-contrast-value: 0%;
 }
 
 [data-theme="dark"] {
@@ -23,5 +26,8 @@
   --positive-color: rgb(139, 192, 95);
   --negative-color: rgb(192, 95, 95);
 
-  --clouds-opacity: 0.25;
+  --clouds-opacity-desktop: 0.5;
+  --clouds-opacity-mobile: 0.4;
+
+  --noise-contrast-value: 100%;
 }
