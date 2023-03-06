@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@300;400&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200;300&family=M+PLUS+1p:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200;300&family=Noto+Sans+JP:wght@500;900&display=swap");
 
 :root {
   --theme-transition-time: 1s;
@@ -191,7 +191,7 @@ body,
   line-height: 2.3rem;
 }
 .name:lang(ja) {
-  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
   font-size: 2.3rem;
   line-height: 2.5rem;
@@ -213,7 +213,7 @@ body,
   line-height: 1.35rem;
 }
 .role:lang(ja) {
-  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 1.5rem;
@@ -285,7 +285,7 @@ body,
   font-size: 1.2rem;
 }
 .theme-button:lang(ja) {
-  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
 }
@@ -353,10 +353,10 @@ body,
   border: transparent;
 }
 
-.content-card {
+/* .content-card {
   background-color: rgb(172, 82, 82);
   border: 5px dotted yellow;
-}
+} */
 
 /* .index-card,
 .about-card,
