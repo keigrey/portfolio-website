@@ -434,8 +434,25 @@ body,
   justify-content: center;
 } */
 
-.about-card p:last-of-type {
+.about-card p:not(:first-child) {
   margin-top: 20px;
+}
+
+.about-card {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 5%,
+    black 15%,
+    black 85%,
+    transparent 95%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 5%,
+    black 15%,
+    black 85%,
+    transparent 95%
+  );
 }
 
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
