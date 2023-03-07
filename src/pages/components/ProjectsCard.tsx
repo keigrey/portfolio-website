@@ -1,11 +1,15 @@
 import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import ProjectCardMini from "./ProjectCardMini";
+import ProjectCardFull from "./ProjectCardFull";
 
 export default function ProjectsCard() {
   const { t } = useTranslation("projects");
+
+  const [selectedProjectId, setSelectedProjectId] = useState<null | number>(
+    null
+  );
 
   const projectTitles = [
     t("ondoTitle"),
@@ -22,14 +26,30 @@ export default function ProjectsCard() {
 
   return (
     <div className="projects-card content-card">
-      {projectTitles.map((title, index) => (
-        <ProjectCardMini
-          key={index}
-          number={index > 9 ? index + 1 : `0${index + 1}`}
-          title={title}
-          seeMore={t("seeMore")}
+      {selectedProjectId === null ? (
+        projectTitles.map((title, index) => (
+          <ProjectCardMini
+            key={index}
+            number={index > 9 ? index + 1 : `0${index + 1}`}
+            title={title}
+            seeMore={t("seeMore")}
+            projectId={index}
+            setProjectId={setSelectedProjectId}
+          />
+        ))
+      ) : (
+        <ProjectCardFull
+          number={
+            selectedProjectId > 9
+              ? selectedProjectId + 1
+              : `0${selectedProjectId + 1}`
+          }
+          title={projectTitles[selectedProjectId]}
+          description={projectDescriptions[selectedProjectId]}
+          date={"oct 10"}
+          setProjectId={setSelectedProjectId}
         />
-      ))}
+      )}
     </div>
   );
 }
