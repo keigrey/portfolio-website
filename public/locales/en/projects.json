@@ -1,3 +1,12 @@
 {
-  "test": "Projects"
+  "test": "Projects",
+  "seeMore": "see more",
+  "ondoTitle": "ONDO",
+  "talltowerTitle": "TALLTOWER",
+  "appreciateTitle": "APPRECIATE",
+  "taberuTitle": "TABERU",
+  "ondoDescription": "Web application and IoT device for monitoring extremes of temperature and humidity in homes, protecting loved ones and giving peace of mind to caregivers.",
+  "talltowerDescription": "A mobile messaging app for language learners, international couples and other people who want to communicate without borders. Helps make the language barrier less evident and makes conversations feel more natural by not having to use translator apps while chatting.",
+  "appreciateDescription": "Man only likes to count his troubles; he doesn't calculate his happiness.” ― Fyodor Dostoevsky, Notes from Underground. Indeed, most of us don't remember small positive things that happened to us. Now we can have those stored in one place that we can access from anywhere.",
+  "taberuDescription": "An app that allows families to review cooked food and clearly see each family members preferences that helps to reduce food waste and time spent buying groceries."
 }
