@@ -110,7 +110,8 @@ body,
 .name-card,
 .content-card,
 .moon,
-.small-moon {
+.small-moon,
+.satellite {
   transition: background-color var(--theme-transition-time);
 }
 
@@ -123,6 +124,10 @@ body,
 .menu,
 .theme-button {
   transition: color var(--theme-transition-time);
+}
+
+#arrow-image {
+  transition: fill var(--theme-transition-time);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -457,6 +462,41 @@ body,
   );
 }
 
+.resume-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.satellite {
+  background-color: var(--foreground-color);
+  width: 35vw;
+  height: 35vw;
+  border-radius: 35vw;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.satellite:hover {
+  background-color: var(--secondary-color);
+}
+
+#arrow-image {
+  fill: var(--background-color);
+  width: 100%;
+  height: 40%;
+}
+
+.resume-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+}
+
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 768px) {
@@ -567,6 +607,12 @@ body,
     flex-direction: column;
     justify-content: center;
   }
+
+  .satellite {
+    width: 28vh;
+    height: 28vh;
+    border-radius: 28vh;
+  }
 }
 
 @media only screen and (min-width: 1030px) {
@@ -596,6 +642,12 @@ body,
   .role:lang(ja) {
     font-size: 2.4rem;
     line-height: 2.5rem;
+  }
+
+  .satellite {
+    width: 35vh;
+    height: 35vh;
+    border-radius: 35vh;
   }
 }
 
