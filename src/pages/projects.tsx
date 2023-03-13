@@ -8,6 +8,7 @@ import ProjectsCard from "./components/ProjectsCard";
 import FilmGrain from "./components/FilmGrain";
 import Clouds from "./components/Clouds";
 import SectionCard from "./components/SectionCard";
+import SmallMoon from "./components/SmallMoon";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -48,17 +49,7 @@ export default function Projects() {
           <Clouds />
           <ProjectsCard />
         </SectionCard>
-        {/* <svg viewBox="0 0 500 500">
-          <filter id="noiseFilter">
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency=".75"
-              numOctaves="2"
-              stitchTiles="stitch"
-            />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#noiseFilter)" />
-        </svg> */}
+        <SmallMoon />
       </div>
     </>
   );
