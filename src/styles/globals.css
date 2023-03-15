@@ -609,6 +609,13 @@ body,
   fill: var(--secondary-color);
 }
 
+.project-card-full--date-links .no-link {
+  pointer-events: none;
+}
+.project-card-full--date-links .no-link svg {
+  fill: var(--inactive-color);
+}
+
 .project-card-full h2:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
