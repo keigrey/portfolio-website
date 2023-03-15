@@ -9,6 +9,8 @@
   --positive-color: rgb(92, 173, 0);
   --negative-color: rgb(173, 0, 0);
 
+  --inactive-color: #8a8a8a;
+
   --clouds-opacity-desktop: 0.65;
   --clouds-opacity-mobile: 0.5;
 
@@ -25,6 +27,8 @@
   --secondary-color: #bcbcbc; /* moon */
   --positive-color: rgb(139, 192, 95);
   --negative-color: rgb(192, 95, 95);
+
+  --inactive-color: #7e7e7e;
 
   --clouds-opacity-desktop: 0.5;
   --clouds-opacity-mobile: 0.4;
