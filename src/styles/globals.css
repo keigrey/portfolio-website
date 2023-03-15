@@ -850,8 +850,22 @@ body,
 
   /* //////////  -- PROJECTS-FULL --  /////////// */
 
-  .project-card-full--top {
-    margin-bottom: 6rem;
+  .projects-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card-full {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .project-card-full--bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    padding-bottom: 5.3rem;
   }
 
   .project-card-full h2:lang(en) {
