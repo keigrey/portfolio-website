@@ -45,7 +45,7 @@ export default function ProjectsCard() {
         projectTitles.map((title, index) => (
           <ProjectCardMini
             key={index}
-            number={index > 9 ? index + 1 : `0${index + 1}`}
+            number={index > 8 ? index + 1 : `0${index + 1}`}
             title={title}
             seeMore={t("seeMore")}
             projectId={index}
@@ -55,7 +55,7 @@ export default function ProjectsCard() {
       ) : (
         <ProjectCardFull
           number={
-            selectedProjectId > 9
+            selectedProjectId > 8
               ? selectedProjectId + 1
               : `0${selectedProjectId + 1}`
           }
