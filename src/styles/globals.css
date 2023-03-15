@@ -457,10 +457,10 @@ body,
   );
   mask-image: linear-gradient(
     to bottom,
-    transparent 5%,
-    black 15%,
-    black 85%,
-    transparent 95%
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
   );
 }
 
@@ -512,10 +512,10 @@ body,
   );
   mask-image: linear-gradient(
     to bottom,
-    transparent 5%,
-    black 15%,
-    black 85%,
-    transparent 95%
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
   );
 }
 
@@ -638,17 +638,19 @@ body,
 .project-card-full h2:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
-  font-size: 2.7rem;
+  font-size: 3.5rem;
 }
 .project-card-full h2:lang(ru) {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 3.3rem;
+  margin-top: -0.6rem;
 }
 .project-card-full h2:lang(ja) {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
-  font-size: 1.35rem;
+  font-size: 3rem;
+  margin-top: -1rem;
 }
 
 .project-card-full h1:lang(en) {
@@ -660,13 +662,13 @@ body,
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 2.3rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: -0.1rem;
 }
 .project-card-full h1:lang(ja) {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
   font-size: 2.3rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: -0.3rem;
 }
 .project-card-full h3 {
   margin-right: 2rem;
@@ -686,22 +688,23 @@ body,
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   font-size: 1.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .project-card-full p:lang(en) {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .project-card-full p:lang(ru) {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
 }
 .project-card-full p:lang(ja) {
   font-family: "M PLUS 1", sans-serif;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .back-button {
