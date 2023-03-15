@@ -50,7 +50,9 @@ export default function ProjectCardFull({
           </svg>
         </Link>
       </div>
-      <p>{description}</p>
+      <div className="project-description">
+        <p>{description}</p>
+      </div>
     </div>
   );
 }

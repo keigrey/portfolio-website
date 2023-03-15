@@ -502,6 +502,23 @@ body,
 
 /* //////////  -- PROJECTS --  /////////// */
 
+.projects-card {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 5%,
+    black 15%,
+    black 85%,
+    transparent 95%
+  );
+}
+
 .project-card-mini {
   margin-bottom: 2rem;
 }
@@ -598,6 +615,8 @@ body,
 .project-card-full--date-links {
   display: flex;
   align-items: center;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
 }
 .project-card-full--date-links svg {
   transition: fill 0.3s;
@@ -635,18 +654,18 @@ body,
 .project-card-full h1:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 .project-card-full h1:lang(ru) {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 0.4rem;
 }
 .project-card-full h1:lang(ja) {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 0.2rem;
 }
 .project-card-full h3 {
@@ -655,24 +674,18 @@ body,
 .project-card-full h3:lang(en) {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   margin-top: 0.05rem;
 }
 .project-card-full h3:lang(ru) {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .project-card-full h3:lang(ja) {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
-  font-size: 1.35rem;
-}
-
-.project-card-full p {
-  margin-bottom: 0.3rem;
-  transition: margin 0.3s;
-  margin-right: 1rem;
+  font-size: 1.4rem;
 }
 
 .project-card-full p:lang(en) {
@@ -826,6 +839,133 @@ body,
     width: 28vh;
     height: 28vh;
     border-radius: 28vh;
+  }
+
+  /* //////////  -- PROJECTS-FULL --  /////////// */
+  .project-card-full {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card-full--top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  .project-card-full--date-links {
+    display: flex;
+    align-items: center;
+  }
+  .project-card-full--date-links svg {
+    transition: fill 0.3s;
+    fill: var(--text-color);
+    height: 1.3rem;
+    margin-right: 0.7rem;
+  }
+  .project-card-full--date-links a:hover svg {
+    fill: var(--secondary-color);
+  }
+
+  .project-card-full--date-links .no-link {
+    pointer-events: none;
+  }
+  .project-card-full--date-links .no-link svg {
+    fill: var(--inactive-color);
+  }
+
+  .project-card-full h2:lang(en) {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2.7rem;
+  }
+  .project-card-full h2:lang(ru) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .project-card-full h2:lang(ja) {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 900;
+    font-size: 1.35rem;
+  }
+
+  .project-card-full h1:lang(en) {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  .project-card-full h1:lang(ru) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+  }
+  .project-card-full h1:lang(ja) {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+  }
+  .project-card-full h3 {
+    margin-right: 2rem;
+  }
+  .project-card-full h3:lang(en) {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 0.05rem;
+  }
+  .project-card-full h3:lang(ru) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .project-card-full h3:lang(ja) {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+  }
+
+  /* .project-card-full p {
+  margin-bottom: 0.3rem;
+  transition: margin 0.3s;
+  margin-right: 1rem;
+}
+
+.project-card-full p:lang(en) {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+.project-card-full p:lang(ru) {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+}
+.project-card-full p:lang(ja) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+} */
+
+  .back-button {
+    transition: background-color 0.3s;
+    background-color: var(--foreground-color);
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 2.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  #back-button-arrow {
+    fill: var(--alternative-text-color);
+    width: 60%;
+  }
+  .back-button:hover {
+    background-color: var(--secondary-color);
   }
 }
 
