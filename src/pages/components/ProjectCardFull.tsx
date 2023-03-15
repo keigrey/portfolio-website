@@ -21,7 +21,7 @@ export default function ProjectCardFull({
       <div className="project-card-full--date-links">
         <h3>{date}</h3>
         <Link
-          href={gitHub}
+          href={gitHub ? gitHub : "/"}
           target="_blank"
           className={!gitHub ? "no-link" : ""}
         >
@@ -35,7 +35,7 @@ export default function ProjectCardFull({
           </svg>
         </Link>
         <Link
-          href={website}
+          href={website ? website : "/"}
           target="_blank"
           className={!website ? "no-link" : ""}
         >
