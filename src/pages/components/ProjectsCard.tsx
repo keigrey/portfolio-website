@@ -23,6 +23,21 @@ export default function ProjectsCard() {
     t("appreciateDescription"),
     t("taberuDescription"),
   ];
+  const projectDates = [
+    t("ondoDate"),
+    t("talltowerDate"),
+    t("appreciateDate"),
+    t("taberuDate"),
+  ];
+  const projectURLs = [
+    ["https://github.com/team-ondo", "https://ondo.onrender.com/"],
+    ["https://github.com/keigrey/talltower", ""],
+    [
+      "https://github.com/keigrey/appreciate-server",
+      "https://app-reciate.herokuapp.com/",
+    ],
+    ["https://github.com/keigrey/taberu", "https://taberu.up.railway.app/"],
+  ];
 
   return (
     <div className="projects-card content-card">
@@ -46,7 +61,9 @@ export default function ProjectsCard() {
           }
           title={projectTitles[selectedProjectId]}
           description={projectDescriptions[selectedProjectId]}
-          date={"oct 10"}
+          date={projectDates[selectedProjectId]}
+          gitHub={projectURLs[selectedProjectId][0]}
+          website={projectURLs[selectedProjectId][1]}
           setProjectId={setSelectedProjectId}
         />
       )}
