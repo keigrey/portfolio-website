@@ -62,18 +62,10 @@ export default function NameCard() {
           </li>
           <li>
             <Link
-              href="/mail"
-              className={`menu-item ${asPath === "/mail" ? "active" : ""}`}
+              href="/contact"
+              className={`menu-item ${asPath === "/contact" ? "active" : ""}`}
             >
-              {asPath === "/mail" ? dotSymbol : t("mail")}
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/info"
-              className={`menu-item ${asPath === "/info" ? "active" : ""}`}
-            >
-              {asPath === "/info" ? dotSymbol : t("info")}
+              {asPath === "/contact" ? dotSymbol : t("contact")}
             </Link>
           </li>
         </ul>
