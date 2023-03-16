@@ -109,11 +109,15 @@ body {
 body,
 .name-card,
 .content-card,
-.moon,
 .small-moon,
 .satellite,
 .back-button {
   transition: background-color var(--theme-transition-time);
+}
+
+.moon {
+  transition: background-color var(--theme-transition-time),
+    box-shadow var(--theme-transition-time);
 }
 
 .dropdown-button {
@@ -124,7 +128,6 @@ body,
 .role,
 .menu,
 .theme-button,
-.project-card-mini,
 .content-card {
   transition: color var(--theme-transition-time);
 }
