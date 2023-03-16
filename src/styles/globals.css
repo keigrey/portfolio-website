@@ -135,7 +135,8 @@ body,
 #arrow-image,
 #see-more-arrow,
 #back-button-arrow,
-.project-card-full--date-links svg {
+.project-card-full--date-links svg,
+.contact-card svg {
   transition: fill var(--theme-transition-time);
 }
 
@@ -734,6 +735,62 @@ body,
   background-color: var(--secondary-color);
 }
 
+/* //////////  -- CONTACT CARD --  /////////// */
+.contact-card svg {
+  fill: var(--text-color);
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.contact-card a:hover svg {
+  fill: var(--secondary-color);
+}
+
+.contact-card h1:last-of-type {
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+}
+.contact-card h1 {
+  word-spacing: 100vw;
+}
+.contact-card h1:lang(en) {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+.contact-card h1:lang(ru) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.3rem;
+  line-height: 2.25rem;
+  margin-bottom: 1rem;
+}
+.contact-card h1:lang(ja) {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 900;
+  font-size: 2.3rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.contact-card p:lang(en) {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+.contact-card p:lang(ru) {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.55rem;
+  margin-top: -0.6rem;
+}
+.contact-card p:lang(ja) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 200;
+  font-size: 1.55rem;
+  margin-top: -0.9rem;
+}
+
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 768px) {
@@ -931,6 +988,13 @@ body,
   .project-card-full p:lang(ja) {
     margin-top: -0.6rem;
   }
+
+  /* //////////  -- CONTACT CARD --  /////////// */
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 1030px) {
@@ -966,6 +1030,34 @@ body,
     width: 35vh;
     height: 35vh;
     border-radius: 35vh;
+  }
+
+  /* //////////  -- CONTACT CARD --  /////////// */
+  .contact-card h1:lang(en) {
+    font-size: 3.3rem;
+  }
+  .contact-card h1:lang(ru) {
+    font-size: 3.4rem;
+    line-height: 3.25rem;
+    margin-bottom: 1rem;
+  }
+  .contact-card h1:lang(ja) {
+    font-size: 3.3rem;
+    line-height: 3.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-card p:lang(en) {
+    font-size: 2rem;
+    margin-top: -0.3rem;
+  }
+  .contact-card p:lang(ru) {
+    font-size: 2rem;
+    margin-top: -0.8rem;
+  }
+  .contact-card p:lang(ja) {
+    font-size: 1.55rem;
+    margin-top: -0.9rem;
   }
 }
 
