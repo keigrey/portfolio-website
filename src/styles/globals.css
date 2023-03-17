@@ -142,7 +142,19 @@ body,
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+.container-layout {
+  /* background-color: red; */
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
 .container {
+  /* background-color: blue; */
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -794,6 +806,14 @@ body,
 /* ///////////////////////////////////////////  -- MEDIA --  //////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 768px) {
+  .container-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .container-layout .name-card-placeholder {
+    order: -1;
+  }
+
   .container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
