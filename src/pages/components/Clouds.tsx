@@ -38,6 +38,7 @@ export default function Clouds() {
     } else {
       setFade(true);
       setTimeout(() => {
+        vantaEffect.destroy();
         setVantaEffect(FOG(getVantaEffectProperties(vantaRef, resolvedTheme)));
         setFade(false);
       }, 500);
