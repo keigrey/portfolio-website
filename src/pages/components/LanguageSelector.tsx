@@ -1,6 +1,5 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
 
 function LanguageSelector() {
   const { locale, locales = [], push } = useRouter();
@@ -9,7 +8,6 @@ function LanguageSelector() {
     push("/", undefined, { locale: l });
   };
 
-  const { t } = useTranslation("about");
   return (
     <>
       <div className="language-selector">

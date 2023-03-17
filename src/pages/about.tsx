@@ -1,7 +1,5 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { useTranslation } from "react-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NameCard from "./components/NameCard";
 import AboutCard from "./components/AboutCard";
@@ -20,8 +18,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
 
 export default function About() {
   const [mounted, setMounted] = useState(false);
-
-  const { t } = useTranslation("about");
 
   useEffect(() => {
     setMounted(true);

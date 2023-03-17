@@ -4,8 +4,6 @@ export default function BackButton({ action, value }) {
   return (
     <div className="back-button" onClick={() => action(value)}>
       <svg
-        // width="30"
-        // height="24"
         viewBox="0 0 30 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

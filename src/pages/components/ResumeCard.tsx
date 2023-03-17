@@ -9,7 +9,6 @@ export default function ResumeCard() {
 
   return (
     <div className="resume-card content-card">
-      {/* <h1>{t("test")}</h1> */}
       <Satellite />
     </div>
   );

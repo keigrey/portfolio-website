@@ -1,23 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
-import { useTheme } from "next-themes";
 import { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import LanguageSelector from "./components/LanguageSelector";
-import ThemeButton from "./components/ThemeButton";
 import NameCard from "./components/NameCard";
 import Moon from "./components/Moon";
 import IndexCard from "./components/IndexCard";
 import SectionCard from "./components/SectionCard";
 import FilmGrain from "./components/FilmGrain";
 import Clouds from "./components/Clouds";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -29,10 +18,6 @@ export async function getStaticProps({ locale }: { locale: string }) {
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-
-  const { locale, locales = [], push } = useRouter();
-
-  const { t } = useTranslation("about");
 
   useEffect(() => {
     setMounted(true);
