@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "next-themes";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 function ThemeButton({ mode }: { mode: string }) {
   const { theme, resolvedTheme, setTheme } = useTheme();

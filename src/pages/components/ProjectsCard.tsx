@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import ProjectCardMini from "./ProjectCardMini";
 import ProjectCardFull from "./ProjectCardFull";
 
