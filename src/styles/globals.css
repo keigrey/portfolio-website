@@ -430,6 +430,7 @@ body,
   height: 100%;
   width: 100%;
   z-index: -1;
+  filter: contrast(160%);
 }
 .clouds.fade-in {
   opacity: var(--clouds-opacity-mobile);
