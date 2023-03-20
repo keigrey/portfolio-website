@@ -187,6 +187,11 @@ body,
 .audio-player {
   height: 2.7rem;
   width: 2.7rem;
+  border: 3px solid var(--text-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 1rem;
 }
 .audio-player button {
@@ -194,8 +199,8 @@ body,
   outline: inherit;
   background: none;
   fill: var(--text-color);
-  height: 100%;
-  width: 100%;
+  height: 60%;
+  width: 60%;
 }
 
 .dropdown-button {
@@ -843,7 +848,6 @@ body,
 
   .lang-sound {
     display: flex;
-    justify-content: space-between;
     align-self: flex-start;
     position: relative;
     width: 100%;
@@ -851,6 +855,7 @@ body,
   .audio-player {
     order: 2;
     margin-right: 0;
+    margin-left: 1rem;
   }
 
   .name-and-role {
