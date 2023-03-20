@@ -137,7 +137,8 @@ body,
 #back-button-arrow,
 .project-card-full--date-links svg,
 .contact-card svg {
-  transition: fill var(--theme-transition-time);
+  transition: fill var(--theme-transition-time),
+    stroke var(--theme-transition-time);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -510,6 +511,7 @@ body,
 
 #arrow-image {
   fill: var(--background-color);
+  stroke: var(--background-color);
   width: 100%;
   height: 40%;
 }
