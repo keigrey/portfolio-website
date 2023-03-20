@@ -136,7 +136,8 @@ body,
 #see-more-arrow,
 #back-button-arrow,
 .project-card-full--date-links svg,
-.contact-card svg {
+.contact-card svg,
+.audio-player button {
   transition: fill var(--theme-transition-time),
     stroke var(--theme-transition-time);
 }
@@ -178,9 +179,23 @@ body,
   z-index: 5;
 }
 
-.language-selector {
+.lang-sound {
   align-self: flex-end;
   position: absolute;
+  display: flex;
+}
+.audio-player {
+  height: 2.7rem;
+  width: 2.7rem;
+  margin-right: 1rem;
+}
+.audio-player button {
+  border: none;
+  outline: inherit;
+  background: none;
+  fill: var(--text-color);
+  height: 100%;
+  width: 100%;
 }
 
 .dropdown-button {
@@ -826,9 +841,16 @@ body,
     order: -1;
   }
 
-  .language-selector {
+  .lang-sound {
+    display: flex;
+    justify-content: space-between;
     align-self: flex-start;
     position: relative;
+    width: 100%;
+  }
+  .audio-player {
+    order: 2;
+    margin-right: 0;
   }
 
   .name-and-role {

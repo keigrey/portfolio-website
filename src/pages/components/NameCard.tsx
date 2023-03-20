@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import LanguageSelector from "./LanguageSelector";
 import ThemeButton from "./ThemeButton";
+import AudioPlayer from "./AudioPlayer";
 
 export default function NameCard() {
   const { t } = useTranslation("common");
@@ -13,7 +14,10 @@ export default function NameCard() {
 
   return (
     <div className="name-card">
-      <LanguageSelector />
+      <div className="lang-sound">
+        <AudioPlayer />
+        <LanguageSelector />
+      </div>
       <div className="name-and-role">
         <h1 className="name">{t("name")}</h1>
         <h2 className="role">{t("role")}</h2>
