@@ -6,7 +6,7 @@ import LanguageSelector from "./LanguageSelector";
 import ThemeButton from "./ThemeButton";
 import AudioPlayer from "./AudioPlayer";
 
-export default function NameCard() {
+export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
   const { t } = useTranslation("common");
 
   const { asPath } = useRouter();
@@ -15,7 +15,11 @@ export default function NameCard() {
   return (
     <div className="name-card">
       <div className="lang-sound">
-        <AudioPlayer />
+        <AudioPlayer
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          audioPlayer={audioPlayer}
+        />
         <LanguageSelector />
       </div>
       <div className="name-and-role">

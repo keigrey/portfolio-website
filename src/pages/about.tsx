@@ -16,7 +16,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default function About() {
+export default function About({ isPlaying, setIsPlaying, audioPlayer }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -39,7 +39,11 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container">
-        <NameCard />
+        <NameCard
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          audioPlayer={audioPlayer}
+        />
         <SectionCard>
           <AboutCard />
         </SectionCard>

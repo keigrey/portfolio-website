@@ -1,10 +1,6 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 
-export default function AudioPlayer() {
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-
-  const audioPlayer = useRef<HTMLAudioElement>(null);
-
+export default function AudioPlayer({ isPlaying, setIsPlaying, audioPlayer }) {
   const togglePlayPause = () => {
     const prevValue = isPlaying;
     setIsPlaying(!prevValue);
@@ -16,7 +12,6 @@ export default function AudioPlayer() {
   };
   return (
     <div className="audio-player">
-      <audio ref={audioPlayer} src="/assets/bgm.mp3" loop></audio>
       <button onClick={togglePlayPause}>
         {isPlaying ? (
           <svg

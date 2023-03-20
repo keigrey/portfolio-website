@@ -1,15 +1,19 @@
+import React, { useState, useRef } from "react";
 import "@/styles/globals.css";
 import "../styles/theme.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { appWithTranslation } from "next-i18next";
 import FilmGrain from "./components/FilmGrain";
-import NameCard from "./components/NameCard";
 import SectionCard from "./components/SectionCard";
 import Clouds from "./components/Clouds";
 import SmallMoon from "./components/SmallMoon";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+
+  const audioPlayer = useRef<HTMLAudioElement>(null);
+
   return (
     <ThemeProvider>
       <FilmGrain />
@@ -20,7 +24,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="name-card-placeholder"></div>
         <SmallMoon />
       </div>
-      <Component {...pageProps} />
+      <audio ref={audioPlayer} src="/assets/bgm.mp3" loop></audio>
+      <Component
+        {...pageProps}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        audioPlayer={audioPlayer}
+      />
     </ThemeProvider>
   );
 }
