@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useRouter } from "next/router";
 import "@/styles/globals.css";
 import "../styles/theme.css";
 import type { AppProps } from "next/app";
@@ -10,6 +11,8 @@ import Clouds from "./components/Clouds";
 import SmallMoon from "./components/SmallMoon";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { asPath } = useRouter();
+
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   const audioPlayer = useRef<HTMLAudioElement>(null);
@@ -22,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Clouds />
         </SectionCard>
         <div className="name-card-placeholder"></div>
-        <SmallMoon />
+        {asPath !== "/" && <SmallMoon />}
       </div>
       <audio ref={audioPlayer} src="/assets/bgm.mp3" loop></audio>
       <Component
