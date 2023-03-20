@@ -183,7 +183,6 @@ body,
 .lang-sound {
   align-self: flex-end;
   position: absolute;
-  display: flex;
 }
 .audio-player {
   height: 2.7rem;
@@ -193,7 +192,7 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1rem;
+  margin-bottom: 0.8rem;
 }
 .audio-player button {
   border: none;
@@ -856,7 +855,7 @@ body,
   }
   .audio-player {
     order: 2;
-    margin-right: 0;
+    margin-bottom: 0;
     margin-left: 0.8rem;
   }
 
