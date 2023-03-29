@@ -5,28 +5,57 @@ import { useTranslation } from "next-i18next";
 import LanguageSelector from "./LanguageSelector";
 import ThemeButton from "./ThemeButton";
 import AudioPlayer from "./AudioPlayer";
+import { motion } from "framer-motion";
 
 export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
   const { t } = useTranslation("common");
+
+  const smallVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+    transition: { duration: 2 },
+  };
+  const nameRoleVariants = {
+    hidden: { opacity: 0, x: "2rem", y: "-50%" },
+    visible: { opacity: 1, x: 0, y: "-50%" },
+    transition: { duration: 2 },
+  };
 
   const { asPath } = useRouter();
   const dotSymbol = "○";
 
   return (
     <div className="name-card">
-      <div className="lang-sound">
+      <motion.div
+        initial={asPath === "/" ? smallVariants.hidden : smallVariants.visible}
+        animate={smallVariants.visible}
+        transition={smallVariants.transition}
+        className="lang-sound"
+      >
         <AudioPlayer
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
           audioPlayer={audioPlayer}
         />
         <LanguageSelector />
-      </div>
-      <div className="name-and-role">
+      </motion.div>
+      <motion.div
+        initial={
+          asPath === "/" ? nameRoleVariants.hidden : nameRoleVariants.visible
+        }
+        animate={nameRoleVariants.visible}
+        transition={nameRoleVariants.transition}
+        className="name-and-role"
+      >
         <h1 className="name">{t("name")}</h1>
         <h2 className="role">{t("role")}</h2>
-      </div>
-      <div className="menu-and-theme">
+      </motion.div>
+      <motion.div
+        initial={asPath === "/" ? smallVariants.hidden : smallVariants.visible}
+        animate={smallVariants.visible}
+        transition={smallVariants.transition}
+        className="menu-and-theme"
+      >
         <ul className="menu">
           <li>
             <Link
@@ -81,7 +110,7 @@ export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
           <ThemeButton mode="light" />
           <ThemeButton mode="dark" />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
