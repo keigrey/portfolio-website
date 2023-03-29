@@ -12,6 +12,11 @@
   margin: 0;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
 /* //////////////////////////////--- FONTS ---/////////////////////////////////////// */
 /* body:lang(en) {
   font-family: "Josefin Sans", sans-serif;
