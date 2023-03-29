@@ -2,11 +2,8 @@ import Head from "next/head";
 import { useState, useEffect, useRef } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import NameCard from "./components/NameCard";
-import Moon from "./components/Moon";
 import IndexCard from "./components/IndexCard";
 import SectionCard from "./components/SectionCard";
-import FilmGrain from "./components/FilmGrain";
-import Clouds from "./components/Clouds";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -47,7 +44,6 @@ export default function Home({ isPlaying, setIsPlaying, audioPlayer }) {
         <SectionCard>
           <IndexCard />
         </SectionCard>
-        <Moon />
       </div>
     </>
   );
