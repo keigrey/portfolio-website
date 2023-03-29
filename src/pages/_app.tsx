@@ -9,6 +9,8 @@ import FilmGrain from "./components/FilmGrain";
 import SectionCard from "./components/SectionCard";
 import Clouds from "./components/Clouds";
 import SmallMoon from "./components/SmallMoon";
+import { motion, AnimatePresence } from "framer-motion";
+import Moon from "./components/Moon";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
@@ -25,7 +27,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Clouds />
         </SectionCard>
         <div className="name-card-placeholder"></div>
-        {asPath !== "/" && <SmallMoon />}
+        <AnimatePresence>
+          {asPath === "/" ? (
+            <Moon key="moon" />
+          ) : (
+            <SmallMoon key="small-moon" />
+          )}
+        </AnimatePresence>
       </div>
       <audio ref={audioPlayer} src="/assets/bgm.mp3" loop></audio>
       <Component
