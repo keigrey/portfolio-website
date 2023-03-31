@@ -11,7 +11,14 @@ import Clouds from "./components/Clouds";
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["about", "common"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "about",
+        "resume",
+        "projects",
+        "hobbies",
+        "contact",
+      ])),
     },
   };
 }

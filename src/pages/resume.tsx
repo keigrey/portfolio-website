@@ -11,7 +11,14 @@ import SmallMoon from "./components/SmallMoon";
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["resume", "common"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "about",
+        "resume",
+        "projects",
+        "hobbies",
+        "contact",
+      ])),
     },
   };
 }
