@@ -49,32 +49,37 @@ export default function ProjectsCard() {
       transition={cardAnimation.transition}
       className="projects-card content-card"
     >
-      {selectedProjectId === null ? (
-        projectTitles.map((title, index) => (
-          <ProjectCardMini
-            key={index}
-            number={index > 8 ? index + 1 : `0${index + 1}`}
-            title={title}
-            seeMore={t("seeMore")}
-            projectId={index}
+      <AnimatePresence mode="wait">
+        {selectedProjectId === null ? (
+          <motion.div>
+            {projectTitles.map((title, index) => (
+              <ProjectCardMini
+                key={index}
+                number={index > 8 ? index + 1 : `0${index + 1}`}
+                title={title}
+                seeMore={t("seeMore")}
+                projectId={index}
+                setProjectId={setSelectedProjectId}
+              />
+            ))}
+          </motion.div>
+        ) : (
+          <ProjectCardFull
+            key={projectTitles[selectedProjectId]}
+            number={
+              selectedProjectId > 8
+                ? selectedProjectId + 1
+                : `0${selectedProjectId + 1}`
+            }
+            title={projectTitles[selectedProjectId]}
+            description={projectDescriptions[selectedProjectId]}
+            date={projectDates[selectedProjectId]}
+            gitHub={projectURLs[selectedProjectId][0]}
+            website={projectURLs[selectedProjectId][1]}
             setProjectId={setSelectedProjectId}
           />
-        ))
-      ) : (
-        <ProjectCardFull
-          number={
-            selectedProjectId > 8
-              ? selectedProjectId + 1
-              : `0${selectedProjectId + 1}`
-          }
-          title={projectTitles[selectedProjectId]}
-          description={projectDescriptions[selectedProjectId]}
-          date={projectDates[selectedProjectId]}
-          gitHub={projectURLs[selectedProjectId][0]}
-          website={projectURLs[selectedProjectId][1]}
-          setProjectId={setSelectedProjectId}
-        />
-      )}
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }

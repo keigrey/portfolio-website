@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import BackButton from "./BackButton";
+import { motion, AnimatePresence } from "framer-motion";
+import { cardAnimation } from "@/framerAnimations";
 
 export default function ProjectCardFull({
   number,
@@ -12,7 +14,13 @@ export default function ProjectCardFull({
   setProjectId,
 }) {
   return (
-    <div className="project-card-full">
+    <motion.div
+      initial={cardAnimation.initial}
+      animate={cardAnimation.animate}
+      exit={cardAnimation.exit}
+      transition={cardAnimation.transition}
+      className="project-card-full"
+    >
       <div className="project-card-full--top">
         <BackButton action={setProjectId} value={null} />
         <h2>{number}.</h2>
@@ -48,6 +56,6 @@ export default function ProjectCardFull({
           <p>{description}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
