@@ -36,12 +36,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         </AnimatePresence>
       </div>
       <audio ref={audioPlayer} src="/assets/bgm.mp3" loop></audio>
-      <Component
-        {...pageProps}
-        isPlaying={isPlaying}
-        setIsPlaying={setIsPlaying}
-        audioPlayer={audioPlayer}
-      />
+      <AnimatePresence mode="wait">
+        <Component
+          key={`${asPath}Component`}
+          {...pageProps}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          audioPlayer={audioPlayer}
+        />
+      </AnimatePresence>
     </ThemeProvider>
   );
 }
