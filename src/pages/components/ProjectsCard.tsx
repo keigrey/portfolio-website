@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import ProjectCardMini from "./ProjectCardMini";
 import ProjectCardFull from "./ProjectCardFull";
+import { motion, AnimatePresence } from "framer-motion";
+import { cardAnimation } from "@/framerAnimations";
 
 export default function ProjectsCard() {
   const { t } = useTranslation("projects");
@@ -40,7 +42,13 @@ export default function ProjectsCard() {
   ];
 
   return (
-    <div className="projects-card content-card">
+    <motion.div
+      initial={cardAnimation.initial}
+      animate={cardAnimation.animate}
+      exit={cardAnimation.exit}
+      transition={cardAnimation.transition}
+      className="projects-card content-card"
+    >
       {selectedProjectId === null ? (
         projectTitles.map((title, index) => (
           <ProjectCardMini
@@ -67,6 +75,6 @@ export default function ProjectsCard() {
           setProjectId={setSelectedProjectId}
         />
       )}
-    </div>
+    </motion.div>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import { motion } from "framer-motion";
+import { cardAnimation } from "@/framerAnimations";
 
 export default function ContactCard() {
   const { t } = useTranslation("contact");
@@ -12,7 +14,13 @@ export default function ContactCard() {
     "https://www.youtube.com/channel/UCSb6UN8fQNOa3VXXk8kYUAw";
 
   return (
-    <div className="contact-card content-card">
+    <motion.div
+      initial={cardAnimation.initial}
+      animate={cardAnimation.animate}
+      exit={cardAnimation.exit}
+      transition={cardAnimation.transition}
+      className="contact-card content-card"
+    >
       <h1>{t("mail")}</h1>
       <p>{emailAddress}</p>
       <h1>{t("socialMedia")}</h1>
@@ -33,6 +41,6 @@ export default function ContactCard() {
           </svg>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
