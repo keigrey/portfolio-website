@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Clouds />
         </SectionCard>
         <div className="name-card-placeholder"></div>
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {asPath === "/" ? (
             <Moon key="moon" />
           ) : (
