@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
@@ -7,8 +7,29 @@ import ThemeButton from "./ThemeButton";
 import AudioPlayer from "./AudioPlayer";
 import { motion } from "framer-motion";
 
+const useIntro = () => {
+  const storage = window.localStorage;
+  const currTimestamp = Date.now();
+  const timestamp = JSON.parse(storage.getItem("timestamp") || "1000");
+
+  const timeLimit = 10 * 60 * 1000;
+
+  const hasTimePassed = currTimestamp - timestamp > timeLimit;
+
+  useEffect(() => {
+    hasTimePassed
+      ? storage.setItem("timestamp", currTimestamp.toString())
+      : storage.setItem("timestamp", timestamp.toString());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return hasTimePassed;
+};
+
 export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
   const { t } = useTranslation("common");
+
+  const showAnimation = useIntro();
 
   const smallVariants = {
     hidden: { opacity: 0 },
@@ -27,7 +48,11 @@ export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
   return (
     <div className="name-card">
       <motion.div
-        initial={asPath === "/" ? smallVariants.hidden : smallVariants.visible}
+        initial={
+          asPath === "/" && showAnimation
+            ? smallVariants.hidden
+            : smallVariants.visible
+        }
         animate={smallVariants.visible}
         transition={smallVariants.transition}
         className="lang-sound"
@@ -41,7 +66,9 @@ export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
       </motion.div>
       <motion.div
         initial={
-          asPath === "/" ? nameRoleVariants.hidden : nameRoleVariants.visible
+          asPath === "/" && showAnimation
+            ? nameRoleVariants.hidden
+            : nameRoleVariants.visible
         }
         animate={nameRoleVariants.visible}
         transition={nameRoleVariants.transition}
@@ -51,7 +78,11 @@ export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
         <h2 className="role">{t("role")}</h2>
       </motion.div>
       <motion.div
-        initial={asPath === "/" ? smallVariants.hidden : smallVariants.visible}
+        initial={
+          asPath === "/" && showAnimation
+            ? smallVariants.hidden
+            : smallVariants.visible
+        }
         animate={smallVariants.visible}
         transition={smallVariants.transition}
         className="menu-and-theme"
