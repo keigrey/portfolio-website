@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import "@/styles/globals.css";
 import "../styles/theme.css";
@@ -12,12 +12,41 @@ import SmallMoon from "./components/SmallMoon";
 import { motion, AnimatePresence } from "framer-motion";
 import Moon from "./components/Moon";
 
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  const [windowSize, setWindowSize] = useState<{
+    width: undefined | number;
+    height: undefined | number;
+  }>({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}
+
 function MyApp({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
 
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   const audioPlayer = useRef<HTMLAudioElement>(null);
+
+  const size = useWindowSize();
 
   return (
     <ThemeProvider>
@@ -43,6 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
           audioPlayer={audioPlayer}
+          isVertical={size.width && size.width < 768}
         />
       </AnimatePresence>
     </ThemeProvider>
