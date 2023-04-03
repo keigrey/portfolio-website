@@ -13,7 +13,7 @@ export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
   const smallVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
-    transition: { duration: 2 },
+    transition: { duration: 2, delay: 1 },
   };
   const nameRoleVariants = {
     hidden: { opacity: 0, x: "2rem", y: "-50%" },
