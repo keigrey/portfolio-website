@@ -149,9 +149,25 @@ body,
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-logo {
+  border-radius: 50%;
+  box-shadow: 0px 0px 100px 10px var(--secondary-color);
+}
+
+.loading-logo svg {
+  height: 4rem;
+  display: block;
+}
 
 .container-layout {
-  /* background-color: red; */
   pointer-events: none;
   position: absolute;
   width: 100vw;
