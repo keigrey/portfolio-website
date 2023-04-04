@@ -26,7 +26,12 @@ const useIntro = () => {
   return hasTimePassed;
 };
 
-export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
+export default function NameCard({
+  isPlaying,
+  setIsPlaying,
+  audioPlayer,
+  isVertical,
+}) {
   const { t } = useTranslation("common");
 
   const showAnimation = useIntro();
@@ -34,12 +39,17 @@ export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
   const smallVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
-    transition: { duration: 2, delay: 1 },
+    transition: { duration: 2, delay: 2 },
   };
   const nameRoleVariants = {
     hidden: { opacity: 0, x: "2rem", y: "-50%" },
     visible: { opacity: 1, x: 0, y: "-50%" },
-    transition: { duration: 2 },
+    transition: { duration: 4 },
+  };
+  const nameRoleVariantsVertical = {
+    hidden: { opacity: 0, y: "-2rem" },
+    visible: { opacity: 1, y: 0 },
+    transition: { duration: 4 },
   };
 
   const { asPath } = useRouter();
@@ -67,10 +77,18 @@ export default function NameCard({ isPlaying, setIsPlaying, audioPlayer }) {
       <motion.div
         initial={
           asPath === "/" && showAnimation
-            ? nameRoleVariants.hidden
+            ? isVertical
+              ? nameRoleVariantsVertical.hidden
+              : nameRoleVariants.hidden
+            : isVertical
+            ? nameRoleVariantsVertical.visible
             : nameRoleVariants.visible
         }
-        animate={nameRoleVariants.visible}
+        animate={
+          isVertical
+            ? nameRoleVariantsVertical.visible
+            : nameRoleVariants.visible
+        }
         transition={nameRoleVariants.transition}
         className="name-and-role"
       >
