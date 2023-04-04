@@ -22,7 +22,12 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default function Hobbies({ isPlaying, setIsPlaying, audioPlayer }) {
+export default function Hobbies({
+  isPlaying,
+  setIsPlaying,
+  audioPlayer,
+  isVertical,
+}) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -49,6 +54,7 @@ export default function Hobbies({ isPlaying, setIsPlaying, audioPlayer }) {
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
           audioPlayer={audioPlayer}
+          isVertical={isVertical}
         />
         <SectionCard>
           <HobbiesCard />

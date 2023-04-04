@@ -23,7 +23,12 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-export default function About({ isPlaying, setIsPlaying, audioPlayer }) {
+export default function About({
+  isPlaying,
+  setIsPlaying,
+  audioPlayer,
+  isVertical,
+}) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -50,6 +55,7 @@ export default function About({ isPlaying, setIsPlaying, audioPlayer }) {
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
           audioPlayer={audioPlayer}
+          isVertical={isVertical}
         />
         <SectionCard>
           <AboutCard />
