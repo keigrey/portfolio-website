@@ -65,6 +65,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    return () => {
+      localStorage.removeItem("timestamp");
+    };
+  }, []);
+
   return (
     <ThemeProvider>
       <FilmGrain />
