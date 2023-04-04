@@ -190,6 +190,10 @@ body,
   order: 1;
 }
 
+.name-card-placeholder {
+  background-color: var(--background-color);
+}
+
 .name-card {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -922,13 +926,13 @@ body,
   }
 
   .menu:lang(en) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .menu:lang(ru) {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .menu:lang(ja) {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .menu:lang(ru) li {
