@@ -2,10 +2,10 @@ import React from "react";
 import { useRouter } from "next/router";
 
 function LanguageSelector() {
-  const { locale, locales = [], push } = useRouter();
+  const { locale, locales = [], push, asPath } = useRouter();
 
   const handleClick = (l: string) => {
-    push("/", undefined, { locale: l });
+    push(asPath, undefined, { locale: l });
   };
 
   return (
