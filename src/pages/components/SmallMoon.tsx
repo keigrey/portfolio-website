@@ -1,18 +1,18 @@
 import React from "react";
-import { anticipate, easeIn, easeInOut, easeOut, motion } from "framer-motion";
+import { circOut, easeInOut, motion } from "framer-motion";
 
 export default function SmallMoon({ isVertical }) {
   const animation = {
     initial: { x: "-300%", y: "-50%" },
     animate: { x: "-50%", y: "-50%" },
-    exit: { x: "200%" },
-    transition: { duration: 1, ease: easeInOut },
+    exit: { x: "200%", transition: { duration: 1, ease: easeInOut } },
+    transition: { duration: 3, ease: circOut },
   };
   const animationVertical = {
     initial: { x: "-50%", y: "200%" },
     animate: { x: "-50%", y: "-50%" },
-    exit: { y: "-300%" },
-    transition: { duration: 1, ease: easeInOut },
+    exit: { y: "-300%", transition: { duration: 1, ease: easeInOut } },
+    transition: { duration: 3, ease: circOut },
   };
   return (
     <motion.div

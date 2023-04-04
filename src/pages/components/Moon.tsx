@@ -1,18 +1,18 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 export default function Moon({ isVertical }) {
   const animation = {
     initial: { opacity: 1, x: "-120%", y: "-50%" },
     animate: { opacity: 1, x: "-50%", y: "-50%" },
-    exit: { x: "150%", transition: { duration: 1 } },
-    transition: { duration: 4, ease: "easeInOut" },
+    exit: { x: "150%", transition: { duration: 1, ease: easeInOut } },
+    transition: { duration: 4 },
   };
   const animationVertical = {
     initial: { opacity: 1, x: "-50%", y: "10%" },
     animate: { opacity: 1, x: "-50%", y: "-50%" },
-    exit: { y: "-250%", transition: { duration: 1 } },
-    transition: { duration: 4, ease: "easeInOut" },
+    exit: { y: "-250%", transition: { duration: 1, ease: easeInOut } },
+    transition: { duration: 4 },
   };
 
   return (
