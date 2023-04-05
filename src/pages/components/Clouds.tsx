@@ -7,7 +7,8 @@ import * as THREE from "three";
 
 const getVantaEffectProperties = (
   vantaReference: any,
-  currentTheme: string | undefined
+  currentTheme: string | undefined,
+  isVertical: boolean | undefined
 ) => {
   const darkTheme = currentTheme === "dark";
 
@@ -20,11 +21,11 @@ const getVantaEffectProperties = (
     midtoneColor: darkTheme ? 0xffffff : 0x000000,
     lowlightColor: darkTheme ? 0x000000 : 0xffffff,
     baseColor: darkTheme ? 0x000000 : 0xffffff,
-    zoom: 0.6,
+    zoom: isVertical ? 0.2 : 0.6,
   };
 };
 
-export default function Clouds() {
+export default function Clouds({ isVertical }) {
   const [vantaEffect, setVantaEffect] = useState<any>(null);
   const vantaRef = useRef(null);
 
@@ -34,17 +35,21 @@ export default function Clouds() {
 
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(FOG(getVantaEffectProperties(vantaRef, resolvedTheme)));
+      setVantaEffect(
+        FOG(getVantaEffectProperties(vantaRef, resolvedTheme, isVertical))
+      );
     } else {
       setFade(true);
       setTimeout(() => {
         vantaEffect.destroy();
-        setVantaEffect(FOG(getVantaEffectProperties(vantaRef, resolvedTheme)));
+        setVantaEffect(
+          FOG(getVantaEffectProperties(vantaRef, resolvedTheme, isVertical))
+        );
         setFade(false);
       }, 500);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [theme]);
+  }, [theme, isVertical]);
 
   useEffect(() => {
     return () => vantaEffect?.destroy();

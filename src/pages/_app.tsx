@@ -94,7 +94,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           >
             <div className="container-layout">
               <SectionCard>
-                <Clouds />
+                <Clouds isVertical={size.width && size.width < 768} />
               </SectionCard>
               <div className="name-card-placeholder"></div>
               <AnimatePresence mode="wait">
