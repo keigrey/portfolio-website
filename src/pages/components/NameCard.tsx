@@ -122,14 +122,7 @@ export default function NameCard({
               {asPath === "/about" ? dotSymbol : t("about")}
             </Link>
           </li>
-          <li>
-            <Link
-              href="/resume"
-              className={`menu-item ${asPath === "/resume" ? "active" : ""}`}
-            >
-              {asPath === "/resume" ? dotSymbol : t("resume")}
-            </Link>
-          </li>
+
           <li>
             <Link
               href="/projects"
@@ -152,6 +145,14 @@ export default function NameCard({
               className={`menu-item ${asPath === "/contact" ? "active" : ""}`}
             >
               {asPath === "/contact" ? dotSymbol : t("contact")}
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/resume"
+              className={`menu-item ${asPath === "/resume" ? "active" : ""}`}
+            >
+              {asPath === "/resume" ? dotSymbol : t("resume")}
             </Link>
           </li>
         </ul>
