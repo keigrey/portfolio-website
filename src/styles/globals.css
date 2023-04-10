@@ -400,7 +400,6 @@ body,
 }
 
 .theme-button.active {
-  /* color: var(--secondary-text-color); */
   color: transparent;
   text-shadow: 0px 0px 3px var(--secondary-text-color);
 }
@@ -458,22 +457,6 @@ body,
   border: transparent;
 }
 
-/* .content-card {
-  background-color: rgb(172, 82, 82);
-  border: 5px dotted yellow;
-} */
-
-/* .index-card,
-.about-card,
-.resume-card,
-.projects-card,
-.hobbies-card,
-.mail-card,
-.info-card {
-  background-color: red;
-  position: absolute;
-} */
-
 /* //////////  -- CLOUDS --  /////////// */
 .clouds {
   overflow: hidden;
@@ -510,11 +493,6 @@ body,
 }
 
 /* //////////  -- ABOUT CARD --  /////////// */
-/* .about-card {
-  display: flex;
-  justify-content: center;
-} */
-
 .about-card p:not(:first-child) {
   margin-top: 20px;
 }
@@ -523,8 +501,8 @@ body,
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 0%,
-    black 10%,
-    black 90%,
+    black 7%,
+    black 93%,
     transparent 100%
   );
   mask-image: linear-gradient(
@@ -973,13 +951,6 @@ body,
   .clouds.fade-in {
     opacity: var(--clouds-opacity-desktop);
     transition: opacity 1.5s;
-  }
-
-  /* //////////  -- ABOUT CARD --  /////////// */
-  .about-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .satellite {
