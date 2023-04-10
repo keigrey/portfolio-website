@@ -14,8 +14,12 @@ export default function AboutCard() {
       transition={cardAnimation.transition}
       className="about-card content-card"
     >
-      <p>{t("introduction")}</p>
-      <p>{t("introduction")}</p>
+      <p>{t("paragraph1")}</p>
+      <p>{t("paragraph2")}</p>
+      <p>{t("paragraph3")}</p>
+      <p>{t("paragraph4")}</p>
+      <p>{t("paragraph5")}</p>
+      <p>{t("paragraph6")}</p>
     </motion.div>
   );
 }
