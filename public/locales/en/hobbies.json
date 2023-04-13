@@ -1,3 +1,19 @@
 {
-  "test": "Hobbies"
+  "introduction": "These are the things I am doing, have done, trying to do or just interested in",
+  "list": [
+    "learning what I don't yet know",
+    "learning to do what I can't yet do",
+    "making music",
+    "cooking",
+    "filmmaking",
+    "poetry",
+    "woodworking",
+    "reading",
+    "listening to music",
+    "watching movies",
+    "juggling",
+    "language learning",
+    "yoga",
+    "jewelry making"
+  ]
 }

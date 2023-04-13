@@ -7,7 +7,7 @@ import { cardAnimation } from "@/framerAnimations";
 export default function ContactCard() {
   const { t } = useTranslation("contact");
 
-  const emailAddress = "amazingsergei@gmail.com";
+  const emailAddress = "koshelev.sergei@outlook.com";
   const gitHubAddress = "https://github.com/keigrey";
   const linkedInAddress = "https://www.linkedin.com/in/sergeikoshelev";
   const youTubeAddress =
@@ -22,7 +22,9 @@ export default function ContactCard() {
       className="contact-card content-card"
     >
       <h1>{t("mail")}</h1>
-      <p>{emailAddress}</p>
+      <p className="email">
+        <a href="mailto:koshelev.sergei@outlook.com">{emailAddress}</a>
+      </p>
       <h1>{t("socialMedia")}</h1>
       <div className="icons">
         <Link href={gitHubAddress} target="_blank">

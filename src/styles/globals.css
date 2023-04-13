@@ -171,6 +171,11 @@ body,
   display: block;
 }
 
+p,
+.menu li {
+  text-shadow: var(--text-shadow-value);
+}
+
 .container-layout {
   pointer-events: none;
   position: absolute;
@@ -800,6 +805,7 @@ body,
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 1.3rem;
+  line-height: 1.6rem;
 }
 .project-card-full p:lang(ja) {
   font-family: "M PLUS 1", sans-serif;
@@ -827,6 +833,50 @@ body,
   background-color: var(--hover-color);
 }
 
+/* //////////  -- HOBBIES CARD --  /////////// */
+/* .hobbies-card h1 {
+  text-align: justify;
+  margin-bottom: 2rem;
+} */
+.hobbies-card h1:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.hobbies-card h1:lang(en) {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.hobbies-card h1:lang(ru) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.hobbies-card h1:lang(ja) {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.hobbies-card h2:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.hobbies-card h2:lang(en) {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.hobbies-card h2:lang(ru) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.hobbies-card h2:lang(ja) {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
 /* //////////  -- CONTACT CARD --  /////////// */
 .contact-card svg {
   fill: var(--text-color);
@@ -836,6 +886,11 @@ body,
 
 .contact-card a:hover svg {
   fill: var(--hover-color);
+}
+
+.contact-card .email a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-card h1:last-of-type {
@@ -868,18 +923,18 @@ body,
 .contact-card p:lang(en) {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 .contact-card p:lang(ru) {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 1.55rem;
+  font-size: 1.4rem;
   margin-top: -0.6rem;
 }
 .contact-card p:lang(ja) {
   font-family: "M PLUS 1", sans-serif;
   font-weight: 200;
-  font-size: 1.55rem;
+  font-size: 1.35rem;
   margin-top: -0.9rem;
 }
 

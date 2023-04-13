@@ -15,6 +15,8 @@
   --clouds-opacity-mobile: 0.5;
 
   --noise-contrast-value: 0%;
+
+  --text-shadow-value: 0px 0px 0px currentColor;
 }
 
 [data-theme="dark"] {
@@ -34,4 +36,6 @@
   --clouds-opacity-mobile: 0.4;
 
   --noise-contrast-value: 100%;
+
+  --text-shadow-value: none;
 }
