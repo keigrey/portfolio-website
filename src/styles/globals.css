@@ -800,6 +800,7 @@ body,
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 1.3rem;
+  line-height: 1.6rem;
 }
 .project-card-full p:lang(ja) {
   font-family: "M PLUS 1", sans-serif;
