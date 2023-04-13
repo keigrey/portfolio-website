@@ -45,10 +45,29 @@ export default function Resume({
         <title>Resume | Sergei Koshelev</title>
         <meta
           name="description"
-          content="Sergei Koshelev is a software engineer with an interest in making music and learning to do things he cannot yet do"
+          content="Download Sergei Koshelev's resume and discover how his experience and skill set can benefit your organization. As a software engineer with a passion for practical solutions, Sergei specializes in web and mobile app development with a focus on JavaScript and Python. His resume includes details about his education, work experience, and technical skills, making it an essential resource for anyone looking to work with a talented and dedicated software engineer. Download Sergei's resume now and see how he can help bring your ideas to life."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="About | Sergei Koshelev" />
+        <meta
+          property="og:description"
+          content="Download Sergei Koshelev's resume and discover how his experience and skill set can benefit your organization. As a software engineer with a passion for practical solutions, Sergei specializes in web and mobile app development with a focus on JavaScript and Python. His resume includes details about his education, work experience, and technical skills, making it an essential resource for anyone looking to work with a talented and dedicated software engineer. Download Sergei's resume now and see how he can help bring your ideas to life."
+        />
+        <meta
+          property="og:image"
+          content="https://www.sergeikoshelev.com/sharingdefault.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.sergeikoshelev.com/resume"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="linkedin:author"
+          content="https://www.linkedin.com/in/sergeikoshelev/"
+        />
+        <meta property="profile:username" content="keigrey" />
       </Head>
       <div className="container">
         <NameCard
