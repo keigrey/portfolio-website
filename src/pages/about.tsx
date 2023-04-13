@@ -45,10 +45,29 @@ export default function About({
         <title>About | Sergei Koshelev</title>
         <meta
           name="description"
-          content="Sergei Koshelev is a software engineer with an interest in making music and learning to do things he cannot yet do"
+          content="Meet Sergei Koshelev, a trilingual software engineer with a passion for problem-solving and technology. With a degree in Railway Engineering and training from Code Chrysalis, Sergei is a full-stack developer proficient in JavaScript and experienced in working with diverse teams. He enjoys programming, as well as pursuing creative outlets such as making music and writing poetry. Sergei is a lifelong learner who stays up-to-date with the latest industry trends and is excited about the future of technology."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="About | Sergei Koshelev" />
+        <meta
+          property="og:description"
+          content="Meet Sergei Koshelev, a trilingual software engineer with a passion for problem-solving and technology. With a degree in Railway Engineering and training from Code Chrysalis, Sergei is a full-stack developer proficient in JavaScript and experienced in working with diverse teams. He enjoys programming, as well as pursuing creative outlets such as making music and writing poetry. Sergei is a lifelong learner who stays up-to-date with the latest industry trends and is excited about the future of technology."
+        />
+        <meta
+          property="og:image"
+          content="https://www.sergeikoshelev.com/sharingdefault.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.sergeikoshelev.com/about"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="linkedin:author"
+          content="https://www.linkedin.com/in/sergeikoshelev/"
+        />
+        <meta property="profile:username" content="keigrey" />
       </Head>
       <div className="container">
         <NameCard

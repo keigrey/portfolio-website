@@ -42,10 +42,26 @@ export default function Home({
         <title>Home | Sergei Koshelev</title>
         <meta
           name="description"
-          content="Sergei Koshelev is a software engineer with an interest in making music and learning to do things he cannot yet do"
+          content="Hey there, I'm Sergei Koshelev - a software engineer with a passion for creating practical solutions. Check out my portfolio website to see my latest projects in web and mobile app development. I specialize in JavaScript and Python, and I'm always looking for exciting new projects to work on. Let's connect and see how I can help bring your ideas to life!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Home | Sergei Koshelev" />
+        <meta
+          property="og:description"
+          content="Hey there, I'm Sergei Koshelev - a software engineer with a passion for creating practical solutions. Check out my portfolio website to see my latest projects in web and mobile app development. I specialize in JavaScript and Python, and I'm always looking for exciting new projects to work on. Let's connect and see how I can help bring your ideas to life!"
+        />
+        <meta
+          property="og:image"
+          content="https://www.sergeikoshelev.com/sharingdefault.jpg"
+        />
+        <meta property="og:url" content="https://www.sergeikoshelev.com/" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="linkedin:author"
+          content="https://www.linkedin.com/in/sergeikoshelev/"
+        />
+        <meta property="profile:username" content="keigrey" />
       </Head>
       <div className="container">
         <NameCard

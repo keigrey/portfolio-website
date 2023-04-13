@@ -44,10 +44,29 @@ export default function Hobbies({
         <title>Hobbies | Sergei Koshelev</title>
         <meta
           name="description"
-          content="Sergei Koshelev is a software engineer with an interest in making music and learning to do things he cannot yet do"
+          content="Explore Sergei Koshelev's hobbies and creative pursuits, such as making music, writing poetry and others. Sergei is a lifelong learner who enjoys reading and discovering new things, and his hobbies reflect his passion for creativity and self-expression. Explore Sergei's hobbies now and discover a different side of this talented software engineer."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="About | Sergei Koshelev" />
+        <meta
+          property="og:description"
+          content="Explore Sergei Koshelev's hobbies and creative pursuits, such as making music, writing poetry and others. Sergei is a lifelong learner who enjoys reading and discovering new things, and his hobbies reflect his passion for creativity and self-expression. Explore Sergei's hobbies now and discover a different side of this talented software engineer."
+        />
+        <meta
+          property="og:image"
+          content="https://www.sergeikoshelev.com/sharingdefault.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.sergeikoshelev.com/hobbies"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="linkedin:author"
+          content="https://www.linkedin.com/in/sergeikoshelev/"
+        />
+        <meta property="profile:username" content="keigrey" />
       </Head>
       <div className="container">
         <NameCard
